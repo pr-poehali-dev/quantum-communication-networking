@@ -14,7 +14,6 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-8">
             <a href="#pain" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Проблема</a>
             <a href="#program" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Программа</a>
-            <a href="#product" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Продукт</a>
             <a href="#audience" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Для кого</a>
           </div>
 
@@ -39,7 +38,7 @@ export function Navbar() {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden border-t border-gray-100 bg-[#FAFBFF] px-6 py-4 flex flex-col gap-4">
-          {[["#pain","Проблема"],["#program","Программа"],["#product","Продукт"],["#audience","Для кого"]].map(([href, label]) => (
+          {[["#pain","Проблема"],["#program","Программа"],["#audience","Для кого"]].map(([href, label]) => (
             <a key={href} href={href} onClick={() => setOpen(false)} className="text-sm text-gray-600 hover:text-gray-900 transition-colors py-1">
               {label}
             </a>
