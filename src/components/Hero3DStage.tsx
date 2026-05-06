@@ -51,15 +51,15 @@ export function Hero3DStage() {
         />
 
         {/* Main content */}
-        <div className="relative z-10 pt-28 flex flex-col">
+        <div className="relative z-10 pt-20 sm:pt-28 flex flex-col">
           {/* Hero text */}
-          <div className="w-full flex justify-center px-6 mt-16">
+          <div className="w-full flex justify-center px-4 sm:px-6 mt-8 sm:mt-16">
             <div className="w-full max-w-4xl">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-sm mb-6"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs sm:text-sm mb-4 sm:mb-6"
                 style={{ borderColor: "rgba(99,102,241,0.25)", background: "rgba(99,102,241,0.06)", color: "#4F46E5" }}
               >
                 <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "#6366F1" }} />
@@ -69,7 +69,7 @@ export function Hero3DStage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-4xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] text-balance"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] text-balance"
                 style={{ color: "#111827" }}
               >
                 Круглый стол Future IT Dent
@@ -78,7 +78,7 @@ export function Hero3DStage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.05 }}
-                className="mt-4 text-xl font-medium"
+                className="mt-3 sm:mt-4 text-base sm:text-xl font-medium"
                 style={{ color: "#374151" }}
               >
                 Как управлять ростом стоматологии через аналитику и PDSA
@@ -87,7 +87,7 @@ export function Hero3DStage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="mt-4 text-base max-w-xl leading-relaxed"
+                className="mt-3 sm:mt-4 text-sm sm:text-base max-w-xl leading-relaxed"
                 style={{ color: "#6B7280" }}
               >
                 Покажем, как с помощью аналитики движения пациентов и PDSA видеть полный путь пациента, находить точки потери выручки и принимать решения на основе данных — а не ощущений.
@@ -96,7 +96,7 @@ export function Hero3DStage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.15 }}
-                className="mt-2 text-sm"
+                className="mt-2 text-xs sm:text-sm"
                 style={{ color: "#9CA3AF" }}
               >
                 Для владельцев, управляющих, главных врачей и маркетологов · Онлайн
@@ -105,11 +105,11 @@ export function Hero3DStage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="mt-8 flex items-center gap-3"
+                className="mt-6 sm:mt-8 flex flex-wrap items-center gap-3"
                 id="register"
               >
                 <button
-                  className="px-6 py-3 font-medium rounded-lg text-sm transition-colors"
+                  className="px-5 sm:px-6 py-2.5 sm:py-3 font-medium rounded-lg text-sm transition-colors"
                   style={{ background: "#4F46E5", color: "#fff" }}
                   onMouseEnter={e => (e.currentTarget.style.background = "#4338CA")}
                   onMouseLeave={e => (e.currentTarget.style.background = "#4F46E5")}
@@ -117,7 +117,7 @@ export function Hero3DStage() {
                   Зарегистрироваться
                 </button>
                 <button
-                  className="px-6 py-3 font-medium rounded-lg text-sm transition-colors"
+                  className="px-5 sm:px-6 py-2.5 sm:py-3 font-medium rounded-lg text-sm transition-colors"
                   style={{ border: "1px solid #E5E7EB", color: "#374151", background: "#fff" }}
                   onMouseEnter={e => (e.currentTarget.style.background = "#F9FAFB")}
                   onMouseLeave={e => (e.currentTarget.style.background = "#fff")}
@@ -128,9 +128,9 @@ export function Hero3DStage() {
             </div>
           </div>
 
-          {/* 3D Stage */}
+          {/* 3D Stage — скрыт на мобиле */}
           <div
-            className="relative mt-16"
+            className="relative hidden sm:block"
             style={{
               width: "100vw",
               marginLeft: "-50vw",

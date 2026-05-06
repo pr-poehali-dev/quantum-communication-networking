@@ -136,7 +136,7 @@ export function WorkflowsSection() {
             style={{ transform: `translateX(-${scrollPosition * (100 / 4)}%)` }}
           >
             {carouselCards.map((card) => (
-              <div key={card.id} className="flex-shrink-0 w-[calc(25%-12px)] min-w-[280px]">
+              <div key={card.id} className="flex-shrink-0 w-[calc(100%-16px)] sm:w-[calc(50%-8px)] lg:w-[calc(25%-12px)]">
                 <div className="bg-white border border-gray-200 rounded-xl overflow-hidden h-[300px] flex flex-col shadow-sm">
                   <div className="flex-1 relative overflow-hidden">
                     <CardMockup type={card.mockup} />

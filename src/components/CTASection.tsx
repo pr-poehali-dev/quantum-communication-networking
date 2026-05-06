@@ -2,13 +2,13 @@ export function CTASection() {
   return (
     <section className="py-[120px] px-6" style={{ backgroundColor: "#FAFBFF" }}>
       <div className="max-w-6xl mx-auto">
-        <div className="border border-gray-200 rounded-2xl p-12 bg-white text-center shadow-sm">
+        <div className="border border-gray-200 rounded-2xl p-6 sm:p-12 bg-white text-center shadow-sm">
           <div className="flex items-center justify-center gap-2 mb-8">
             <div className="w-2 h-2 rounded-full bg-indigo-500" />
             <span className="text-sm text-gray-400">Регистрация</span>
           </div>
           <h2
-            className="text-3xl sm:text-4xl lg:text-[44px] text-gray-900 mb-6 mx-auto max-w-3xl"
+            className="text-2xl sm:text-3xl lg:text-[44px] text-gray-900 mb-4 sm:mb-6 mx-auto max-w-3xl"
             style={{
               letterSpacing: "-0.0325em",
               fontVariationSettings: '"opsz" 28',

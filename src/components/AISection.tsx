@@ -85,7 +85,7 @@ export function AISection() {
           {/* Bottom two columns */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }} className="mt-16">
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="border-t border-r border-b border-gray-200 pt-12 pr-12 pb-16">
+              <div className="border-t md:border-r border-b border-gray-200 pt-8 md:pt-12 pr-0 md:pr-12 pb-10 md:pb-16">
                 <h3 className="text-gray-800 font-medium text-xl mb-3">Аналитика движения пациентов</h3>
                 <p className="text-gray-500 text-base mb-8">Автоматическое разделение на группы, сквозной путь от обращения до повторного визита, детализация до конкретного пациента.</p>
                 <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
@@ -108,7 +108,7 @@ export function AISection() {
                 </div>
               </div>
 
-              <div className="border-t border-b border-gray-200 pt-12 pl-12 pb-16">
+              <div className="border-t border-b border-gray-200 pt-8 md:pt-12 pl-0 md:pl-12 pb-10 md:pb-16">
                 <h3 className="text-gray-800 font-medium text-xl mb-3">PDSA Future IT Dent</h3>
                 <p className="text-gray-500 text-base mb-8">Вы ставите цель → внедряете изменение → измеряете результат → принимаете решение.</p>
                 <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">

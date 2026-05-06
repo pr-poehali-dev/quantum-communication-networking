@@ -34,8 +34,9 @@ export function ProductDirectionSection() {
           <span className="text-gray-900 font-medium">Без теории ради теории.</span> Только реальные сценарии: полный путь пациента, точки потери выручки, постановка гипотез и оценка результатов.
         </p>
 
-        {/* Program steps — full-bleed 3D like Hero */}
+        {/* Program steps — full-bleed 3D like Hero, hidden on mobile */}
         <div
+          className="hidden sm:block"
           style={{
             width: "100vw",
             marginLeft: "calc(-50vw + 50%)",
@@ -128,10 +129,31 @@ export function ProductDirectionSection() {
           </div>
         </div>
 
+        {/* Program steps — mobile list */}
+        <div className="sm:hidden flex flex-col gap-3 mb-12">
+          {[
+            { num: "01", title: "Полный путь пациента", desc: "Откуда пришёл, записался ли, дошёл ли, оплатил ли — сквозная воронка без пробелов", accent: "#3b82f6", time: "12:00" },
+            { num: "02", title: "Точки потери выручки", desc: "Где именно клиника теряет деньги: между обращением и записью, между записью и приёмом, после приёма", accent: "#6366f1", time: "12:20" },
+            { num: "03", title: "Постановка гипотез", desc: "Как сформулировать проверяемую гипотезу роста и не слить бюджет на изменения, которые не работают", accent: "#8b5cf6", time: "12:40" },
+            { num: "04", title: "Оценка результатов", desc: "PDSA-цикл в действии: как понять, сработало ли изменение, и принять решение о масштабировании", accent: "#22c55e", time: "13:00" },
+          ].map((item, i) => (
+            <div key={item.num} className="flex items-start gap-4 rounded-xl border border-gray-200 bg-white px-4 py-4" style={{ borderLeftColor: item.accent, borderLeftWidth: 3 }}>
+              <span className="text-sm font-bold text-gray-300 flex-shrink-0 w-6">{item.num}</span>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center justify-between gap-2 mb-1">
+                  <span className="text-sm font-semibold text-gray-900">{item.title}</span>
+                  <span className="text-xs text-gray-400 flex-shrink-0">{item.time}</span>
+                </div>
+                <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
         {/* Bottom two-column section */}
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Left column - Manage projects end-to-end */}
-          <div className="border-t border-r border-b border-gray-200 pt-10 pr-10 pb-16">
+          <div className="border-t md:border-r border-b border-gray-200 pt-8 md:pt-10 pr-0 md:pr-10 pb-10 md:pb-16">
             <h3 className="text-xl font-medium text-gray-800 mb-3">Аналитика движения пациентов</h3>
             <p className="text-gray-500 text-base leading-relaxed mb-8">
               Разделите пациентов на группы и управляйте каждой: первичные, повторные, лояльные, ДМС.
@@ -156,7 +178,7 @@ export function ProductDirectionSection() {
             </div>
           </div>
 
-          <div className="border-t border-b border-gray-200 pt-10 pl-10 pb-16">
+          <div className="border-t border-b border-gray-200 pt-8 md:pt-10 pl-0 md:pl-10 pb-10 md:pb-16">
             <h3 className="text-xl font-medium text-gray-800 mb-3">Когортный анализ</h3>
             <p className="text-gray-500 text-base leading-relaxed mb-8">
               Анализируйте поведение пациентов во времени: когда пришли, оплатили, вернулись.
