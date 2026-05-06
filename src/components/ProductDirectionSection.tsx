@@ -7,19 +7,19 @@ export function ProductDirectionSection() {
         className="absolute inset-x-0 top-0 pointer-events-none"
         style={{
           height: "20%",
-          background: "linear-gradient(to bottom, rgba(255,255,255,0.05), transparent 100%)",
+          background: "linear-gradient(to bottom, rgba(0,0,0,0.015), transparent 100%)",
         }}
       />
 
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-2 mb-6">
           <div className="w-3 h-3 rounded-full bg-green-500" />
-          <span className="text-zinc-400 text-sm">Программа мероприятия</span>
-          <ChevronRight className="w-4 h-4 text-zinc-500" />
+          <span className="text-gray-400 text-sm">Программа мероприятия</span>
+          <ChevronRight className="w-4 h-4 text-gray-300" />
         </div>
 
         <h2
-          className="text-3xl sm:text-4xl lg:text-[44px] font-medium text-white mb-8 max-w-3xl"
+          className="text-3xl sm:text-4xl lg:text-[44px] font-medium text-gray-900 mb-8 max-w-3xl"
           style={{
             letterSpacing: "-0.0325em",
             fontVariationSettings: '"opsz" 28',
@@ -30,8 +30,8 @@ export function ProductDirectionSection() {
           Что разберём на круглом столе
         </h2>
 
-        <p className="text-zinc-400 text-lg max-w-md mb-16">
-          <span className="text-white font-medium">Без теории ради теории.</span> Только реальные сценарии: полный путь пациента, точки потери выручки, постановка гипотез и оценка результатов.
+        <p className="text-gray-500 text-lg max-w-md mb-16">
+          <span className="text-gray-900 font-medium">Без теории ради теории.</span> Только реальные сценарии: полный путь пациента, точки потери выручки, постановка гипотез и оценка результатов.
         </p>
 
         {/* 3D Timeline Visualization */}
@@ -181,14 +181,14 @@ export function ProductDirectionSection() {
         {/* Bottom two-column section */}
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Left column - Manage projects end-to-end */}
-          <div className="border-t border-r border-b border-zinc-800 pt-10 pr-10 pb-16">
-            <h3 className="text-xl font-medium text-zinc-200 mb-3">Аналитика движения пациентов</h3>
-            <p className="text-zinc-500 text-base leading-relaxed mb-8">
+          <div className="border-t border-r border-b border-gray-200 pt-10 pr-10 pb-16">
+            <h3 className="text-xl font-medium text-gray-800 mb-3">Аналитика движения пациентов</h3>
+            <p className="text-gray-500 text-base leading-relaxed mb-8">
               Разделите пациентов на группы и управляйте каждой: первичные, повторные, лояльные, ДМС.
             </p>
 
-            <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-5">
-              <h4 className="text-lg font-medium text-zinc-200 mb-5">Сегменты пациентов</h4>
+            <div className="rounded-xl border border-gray-200 bg-white p-5">
+              <h4 className="text-lg font-medium text-gray-800 mb-5">Сегменты пациентов</h4>
               {[
                 { label: "Первичные", color: "bg-blue-500", pct: "34%" },
                 { label: "Повторные", color: "bg-indigo-500", pct: "41%" },
@@ -196,43 +196,43 @@ export function ProductDirectionSection() {
                 { label: "ДМС", color: "bg-yellow-500", pct: "7%" },
               ].map((seg) => (
                 <div key={seg.label} className="flex items-center gap-4 mb-3">
-                  <span className="text-zinc-500 text-sm w-24">{seg.label}</span>
-                  <div className="flex-1 h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                  <span className="text-gray-400 text-sm w-24">{seg.label}</span>
+                  <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
                     <div className={`h-full rounded-full ${seg.color}`} style={{ width: seg.pct }} />
                   </div>
-                  <span className="text-zinc-400 text-sm w-8 text-right">{seg.pct}</span>
+                  <span className="text-gray-500 text-sm w-8 text-right">{seg.pct}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="border-t border-b border-zinc-800 pt-10 pl-10 pb-16">
-            <h3 className="text-xl font-medium text-zinc-200 mb-3">Когортный анализ</h3>
-            <p className="text-zinc-500 text-base leading-relaxed mb-8">
+          <div className="border-t border-b border-gray-200 pt-10 pl-10 pb-16">
+            <h3 className="text-xl font-medium text-gray-800 mb-3">Когортный анализ</h3>
+            <p className="text-gray-500 text-base leading-relaxed mb-8">
               Анализируйте поведение пациентов во времени: когда пришли, оплатили, вернулись.
             </p>
 
             <div className="relative h-48">
               <div
-                className="absolute rounded-lg bg-zinc-800/40 border border-zinc-700/30 px-4 py-2"
+                className="absolute rounded-lg bg-gray-100/60 border border-gray-200 px-4 py-2"
                 style={{ top: 0, left: "10%", width: "80%" }}
               >
-                <span className="flex items-center gap-2 text-zinc-500 text-sm">
+                <span className="flex items-center gap-2 text-gray-400 text-sm">
                   <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
                   Когорта янв — не вернулись через 6 мес
                 </span>
               </div>
               <div
-                className="absolute rounded-lg bg-zinc-800/60 border border-zinc-700/40 px-4 py-2"
+                className="absolute rounded-lg bg-gray-100/80 border border-gray-200 px-4 py-2"
                 style={{ top: "30px", left: "5%", width: "85%" }}
               >
-                <span className="flex items-center gap-2 text-zinc-400 text-sm">
+                <span className="flex items-center gap-2 text-gray-500 text-sm">
                   <span className="w-1.5 h-1.5 rounded-full bg-yellow-500" />
                   Когорта фев — 40% вернулись
                 </span>
               </div>
               <div
-                className="absolute rounded-xl bg-zinc-800/90 border border-zinc-700/50 px-5 py-4"
+                className="absolute rounded-xl bg-white border border-gray-200 shadow-sm px-5 py-4"
                 style={{ top: "60px", left: 0, width: "95%" }}
               >
                 <div className="flex items-center gap-2 mb-2">
@@ -241,62 +241,56 @@ export function ProductDirectionSection() {
                       <path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z" />
                     </svg>
                   </span>
-                  <span className="text-green-500 font-medium text-sm">Когорта март — 68% вернулись</span>
+                  <span className="text-green-600 font-medium text-sm">Когорта март — 68% вернулись</span>
                 </div>
-                <p className="text-zinc-300 text-sm mb-3">Что изменили: скрипты администраторов + напоминания</p>
-                <span className="text-zinc-500 text-xs">PDSA подтвердил гипотезу</span>
+                <p className="text-gray-600 text-sm mb-3">Что изменили: скрипты администраторов + напоминания</p>
+                <span className="text-gray-400 text-xs">PDSA подтвердил гипотезу</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 border-b border-zinc-800">
-          {/* Left column - Feature list */}
-          <div className="border-r border-zinc-800 pt-16 pr-10 pb-16 flex flex-col justify-center">
-            <h3 className="text-2xl font-medium text-zinc-200 mb-8 leading-tight">
-              Где клиника
-              <br />
-              теряет выручку
+        <div className="grid grid-cols-1 md:grid-cols-2 border-b border-gray-200">
+          <div className="border-r border-gray-200 pt-16 pr-10 pb-16 flex flex-col justify-center">
+            <h3 className="text-2xl font-medium text-gray-900 mb-8 leading-tight">
+              Где клиника<br />теряет выручку
             </h3>
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-3">
                 <div className="w-1 h-5 rounded-full bg-red-500" />
-                <span className="text-zinc-200 font-medium">Есть обращение — нет записи</span>
+                <span className="text-gray-800 font-medium">Есть обращение — нет записи</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-1 h-5 rounded-full bg-orange-500/80" />
-                <span className="text-zinc-400">Есть запись — пациент не дошёл</span>
+                <span className="text-gray-500">Есть запись — пациент не дошёл</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-1 h-5 rounded-full bg-yellow-500/70" />
-                <span className="text-zinc-400">Был приём — нет оплаты</span>
+                <span className="text-gray-500">Был приём — нет оплаты</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-1 h-5 rounded-full bg-purple-500/60" />
-                <span className="text-zinc-500">Есть план лечения — нет возврата</span>
+                <span className="text-gray-400">Есть план лечения — нет возврата</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-1 h-5 rounded-full bg-zinc-500/40" />
-                <span className="text-zinc-500">Пациент «выпал» через 6 месяцев</span>
+                <div className="w-1 h-5 rounded-full bg-gray-300" />
+                <span className="text-gray-400">Пациент «выпал» через 6 месяцев</span>
               </div>
             </div>
           </div>
 
-          {/* Right column - PDSA mockup */}
           <div className="pt-10 pl-10 pb-16">
-            <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 overflow-hidden">
-              <div className="flex items-center gap-2 px-4 py-3 border-b border-zinc-800 text-zinc-400 text-sm">
+            <div className="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm">
+              <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100 text-gray-500 text-sm">
                 <span className="w-2 h-2 rounded-full bg-indigo-400" />
                 <span>PDSA Future IT Dent</span>
-                <span className="ml-auto text-zinc-600">Гипотеза #7</span>
+                <span className="ml-auto text-gray-400">Гипотеза #7</span>
               </div>
-
               <div className="p-5">
                 <div className="mb-4">
-                  <span className="text-xs text-zinc-500">Гипотеза</span>
-                  <p className="text-zinc-200 text-sm font-medium mt-1">Напоминания за 2 дня до приёма снизят неявки</p>
+                  <span className="text-xs text-gray-400">Гипотеза</span>
+                  <p className="text-gray-800 text-sm font-medium mt-1">Напоминания за 2 дня до приёма снизят неявки</p>
                 </div>
-
                 {[
                   { step: "Plan", label: "Запустить напоминания в мае", color: "bg-blue-500", done: true },
                   { step: "Do", label: "Внедрено для 120 пациентов", color: "bg-indigo-500", done: true },
@@ -304,24 +298,23 @@ export function ProductDirectionSection() {
                   { step: "Act", label: "Масштабировать на всю клинику", color: "bg-orange-500", done: false },
                 ].map((row) => (
                   <div key={row.step} className="flex items-start gap-3 mb-3">
-                    <div className={`w-1 h-full rounded-full ${row.color} flex-shrink-0 self-stretch min-h-[4px]`} style={{ width: "3px" }} />
+                    <div className={`rounded-full ${row.color} flex-shrink-0 self-stretch min-h-[4px]`} style={{ width: "3px" }} />
                     <div>
-                      <span className={`text-xs font-medium ${row.done ? "text-zinc-300" : "text-zinc-500"}`}>{row.step}</span>
-                      <p className={`text-xs mt-0.5 ${row.done ? "text-zinc-400" : "text-zinc-600"}`}>{row.label}</p>
+                      <span className={`text-xs font-medium ${row.done ? "text-gray-700" : "text-gray-400"}`}>{row.step}</span>
+                      <p className={`text-xs mt-0.5 ${row.done ? "text-gray-500" : "text-gray-300"}`}>{row.label}</p>
                     </div>
                   </div>
                 ))}
-
                 <div className="flex flex-col gap-2 mt-6">
                   <div className="flex gap-2 flex-wrap">
-                    <div className="h-2 bg-indigo-500/30 rounded w-20" />
-                    <div className="h-2 bg-zinc-700/30 rounded w-16" />
-                    <div className="h-2 bg-zinc-700/50 rounded w-24" />
+                    <div className="h-2 bg-indigo-200 rounded w-20" />
+                    <div className="h-2 bg-gray-100 rounded w-16" />
+                    <div className="h-2 bg-gray-100 rounded w-24" />
                   </div>
                   <div className="flex gap-2 flex-wrap">
-                    <div className="h-2 bg-zinc-700/30 rounded w-16" />
-                    <div className="h-2 bg-green-500/30 rounded w-20" />
-                    <div className="h-2 bg-zinc-700/50 rounded w-12" />
+                    <div className="h-2 bg-gray-100 rounded w-16" />
+                    <div className="h-2 bg-green-100 rounded w-20" />
+                    <div className="h-2 bg-gray-100 rounded w-12" />
                   </div>
                 </div>
               </div>
@@ -333,30 +326,30 @@ export function ProductDirectionSection() {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <span className="w-2 h-2 rounded-full bg-indigo-400" />
-              <span className="text-zinc-200 font-medium">Первичные</span>
+              <span className="text-gray-800 font-medium">Первичные</span>
             </div>
-            <p className="text-zinc-500 text-sm leading-relaxed">Откуда пришли, записались ли, дошли ли до приёма.</p>
+            <p className="text-gray-500 text-sm leading-relaxed">Откуда пришли, записались ли, дошли ли до приёма.</p>
           </div>
           <div>
             <div className="flex items-center gap-2 mb-3">
               <span className="w-2 h-2 rounded-full bg-blue-400" />
-              <span className="text-zinc-200 font-medium">Повторные</span>
+              <span className="text-gray-800 font-medium">Повторные</span>
             </div>
-            <p className="text-zinc-500 text-sm leading-relaxed">Вернулись ли, когда и что повлияло на возврат.</p>
+            <p className="text-gray-500 text-sm leading-relaxed">Вернулись ли, когда и что повлияло на возврат.</p>
           </div>
           <div>
             <div className="flex items-center gap-2 mb-3">
               <span className="w-2 h-2 rounded-full bg-green-400" />
-              <span className="text-zinc-200 font-medium">Лояльные</span>
+              <span className="text-gray-800 font-medium">Лояльные</span>
             </div>
-            <p className="text-zinc-500 text-sm leading-relaxed">Основная доходность — кто приносит больше всего.</p>
+            <p className="text-gray-500 text-sm leading-relaxed">Основная доходность — кто приносит больше всего.</p>
           </div>
           <div>
             <div className="flex items-center gap-2 mb-3">
               <span className="w-2 h-2 rounded-full bg-yellow-400" />
-              <span className="text-zinc-200 font-medium">ДМС</span>
+              <span className="text-gray-800 font-medium">ДМС</span>
             </div>
-            <p className="text-zinc-500 text-sm leading-relaxed">Сравнение маржинальности с другими сегментами.</p>
+            <p className="text-gray-500 text-sm leading-relaxed">Сравнение маржинальности с другими сегментами.</p>
           </div>
         </div>
       </div>

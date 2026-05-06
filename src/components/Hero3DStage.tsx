@@ -8,7 +8,8 @@ import { AISection } from "./AISection"
 import { ProductDirectionSection } from "./ProductDirectionSection"
 import { WorkflowsSection } from "./WorkflowsSection"
 import { CTASection } from "./CTASection"
-import { Footer } from "./Footer"
+
+const BG = "#FAFBFF"
 
 export function Hero3DStage() {
   const [yOffset, setYOffset] = useState(0)
@@ -19,7 +20,6 @@ export function Hero3DStage() {
       const offset = Math.min(scrollY / 300, 1) * -20
       setYOffset(offset)
     }
-
     window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
@@ -34,41 +34,43 @@ export function Hero3DStage() {
 
   return (
     <>
-      <section className="relative min-h-screen overflow-hidden" style={{ backgroundColor: "#09090B" }}>
+      <section className="relative min-h-screen overflow-hidden" style={{ backgroundColor: BG }}>
         <Navbar />
 
         {/* Subtle glow */}
         <div
           className="absolute pointer-events-none"
           style={{
-            top: "50%",
+            top: "40%",
             left: "50%",
             transform: "translate(-50%, -30%)",
             width: "1200px",
             height: "800px",
-            background: "radial-gradient(ellipse at center, rgba(99, 102, 241, 0.08) 0%, transparent 70%)",
+            background: "radial-gradient(ellipse at center, rgba(99,102,241,0.07) 0%, transparent 70%)",
           }}
         />
 
         {/* Main content */}
         <div className="relative z-10 pt-28 flex flex-col">
-          {/* Hero text - contained and centered */}
+          {/* Hero text */}
           <div className="w-full flex justify-center px-6 mt-16">
             <div className="w-full max-w-4xl">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-sm mb-6"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-sm mb-6"
+                style={{ borderColor: "rgba(99,102,241,0.25)", background: "rgba(99,102,241,0.06)", color: "#4F46E5" }}
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
+                <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "#6366F1" }} />
                 Онлайн-вебинар · 12 мая 2026 · 12:00
               </motion.div>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-4xl md:text-5xl lg:text-[56px] font-medium text-white leading-[1.1] text-balance"
+                className="text-4xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] text-balance"
+                style={{ color: "#111827" }}
               >
                 Круглый стол Future IT Dent
               </motion.h1>
@@ -76,7 +78,8 @@ export function Hero3DStage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.05 }}
-                className="mt-4 text-xl text-zinc-300 font-medium"
+                className="mt-4 text-xl font-medium"
+                style={{ color: "#374151" }}
               >
                 Как управлять ростом стоматологии через аналитику и PDSA
               </motion.p>
@@ -84,7 +87,8 @@ export function Hero3DStage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="mt-4 text-base text-zinc-400 max-w-xl leading-relaxed"
+                className="mt-4 text-base max-w-xl leading-relaxed"
+                style={{ color: "#6B7280" }}
               >
                 Покажем, как с помощью аналитики движения пациентов и PDSA видеть полный путь пациента, находить точки потери выручки и принимать решения на основе данных — а не ощущений.
               </motion.p>
@@ -92,7 +96,8 @@ export function Hero3DStage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.15 }}
-                className="mt-2 text-sm text-zinc-500"
+                className="mt-2 text-sm"
+                style={{ color: "#9CA3AF" }}
               >
                 Для владельцев, управляющих, главных врачей и маркетологов · Онлайн
               </motion.p>
@@ -103,17 +108,27 @@ export function Hero3DStage() {
                 className="mt-8 flex items-center gap-3"
                 id="register"
               >
-                <button className="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-500 transition-colors text-sm">
+                <button
+                  className="px-6 py-3 font-medium rounded-lg text-sm transition-colors"
+                  style={{ background: "#4F46E5", color: "#fff" }}
+                  onMouseEnter={e => (e.currentTarget.style.background = "#4338CA")}
+                  onMouseLeave={e => (e.currentTarget.style.background = "#4F46E5")}
+                >
                   Зарегистрироваться
                 </button>
-                <button className="px-6 py-3 border border-zinc-700 text-zinc-300 font-medium rounded-lg hover:bg-zinc-800 transition-colors text-sm">
+                <button
+                  className="px-6 py-3 font-medium rounded-lg text-sm transition-colors"
+                  style={{ border: "1px solid #E5E7EB", color: "#374151", background: "#fff" }}
+                  onMouseEnter={e => (e.currentTarget.style.background = "#F9FAFB")}
+                  onMouseLeave={e => (e.currentTarget.style.background = "#fff")}
+                >
                   Программа
                 </button>
               </motion.div>
             </div>
           </div>
 
-          {/* 3D Stage - full bleed */}
+          {/* 3D Stage */}
           <div
             className="relative mt-16"
             style={{
@@ -129,12 +144,8 @@ export function Hero3DStage() {
           >
             <div
               className="absolute bottom-0 left-0 right-0 h-72 z-10 pointer-events-none"
-              style={{
-                background: "linear-gradient(to top, #09090B 20%, transparent 100%)",
-              }}
+              style={{ background: `linear-gradient(to top, ${BG} 20%, transparent 100%)` }}
             />
-
-            {/* Perspective container */}
             <div
               style={{
                 transform: `translateY(${yOffset}px)`,
@@ -148,30 +159,23 @@ export function Hero3DStage() {
                 position: "relative",
               }}
             >
-              {/* Transformed base */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{
-                  delay: 0.5,
-                  duration: 1,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
+                transition={{ delay: 0.5, duration: 1, ease: [0.22, 1, 0.36, 1] }}
                 style={{
-                  backgroundColor: "#09090B",
+                  backgroundColor: "#fff",
                   transformOrigin: "0 0",
                   backfaceVisibility: "hidden",
                   WebkitBackfaceVisibility: "hidden",
-                  border: "1px solid #1e1e1e",
+                  border: "1px solid #e5e7eb",
                   borderRadius: "10px",
+                  boxShadow: "0 20px 60px rgba(0,0,0,0.08)",
                   width: "1600px",
                   height: "900px",
                   margin: "280px auto auto",
                   position: "absolute",
-                  top: 0,
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
+                  top: 0, bottom: 0, left: 0, right: 0,
                   transform: `translate(${baseTransform.translateX}%) scale(${baseTransform.scale}) rotateX(${baseTransform.rotateX}deg) rotateY(${baseTransform.rotateY}deg) rotate(${baseTransform.rotateZ}deg)`,
                   transformStyle: "preserve-3d",
                   overflow: "hidden",

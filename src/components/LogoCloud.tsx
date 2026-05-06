@@ -9,7 +9,7 @@ const stats = [
 
 export function LogoCloud() {
   return (
-    <div className="relative z-20 pb-24 pt-8" style={{ backgroundColor: "#09090B" }}>
+    <div className="relative z-20 pb-24 pt-8" style={{ backgroundColor: "#FAFBFF" }}>
       <div className="w-full flex justify-center px-6">
         <div className="w-full max-w-4xl text-center">
           <motion.p
@@ -17,7 +17,7 @@ export function LogoCloud() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-lg text-zinc-300 mb-2"
+            className="text-lg text-gray-700 mb-2"
           >
             После круглого стола вы сможете принимать решения на основе данных
           </motion.p>
@@ -26,11 +26,10 @@ export function LogoCloud() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg text-zinc-400 mb-16"
+            className="text-lg text-gray-500 mb-16"
           >
             А не ощущений, догадок и слепой интуиции.
           </motion.p>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -40,9 +39,9 @@ export function LogoCloud() {
           >
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-3xl font-semibold text-white mb-1">{stat.value}</div>
-                <div className="text-sm text-indigo-400 font-medium mb-1">{stat.label}</div>
-                <div className="text-xs text-zinc-600">{stat.desc}</div>
+                <div className="text-3xl font-semibold text-gray-900 mb-1">{stat.value}</div>
+                <div className="text-sm text-indigo-600 font-medium mb-1">{stat.label}</div>
+                <div className="text-xs text-gray-400">{stat.desc}</div>
               </div>
             ))}
           </motion.div>

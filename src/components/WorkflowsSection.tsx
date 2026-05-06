@@ -138,15 +138,8 @@ export function WorkflowsSection() {
   }
 
   return (
-    <section className="relative py-40" style={{ backgroundColor: "#09090B" }}>
-      {/* Top gradient */}
-      <div
-        className="absolute top-0 left-0 right-0 pointer-events-none"
-        style={{
-          height: "20%",
-          background: "linear-gradient(to bottom, rgba(255,255,255,0.05), transparent)",
-        }}
-      />
+    <section className="relative py-40" style={{ backgroundColor: "#FAFBFF" }}>
+      <div className="absolute top-0 left-0 right-0 pointer-events-none" style={{ height: "20%", background: "linear-gradient(to bottom, rgba(0,0,0,0.015), transparent)" }} />
 
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
@@ -154,12 +147,12 @@ export function WorkflowsSection() {
           <div className="lg:max-w-xl">
             <div className="flex items-center gap-2 mb-6" id="audience">
               <div className="w-2 h-2 rounded-full bg-orange-500" />
-              <span className="text-sm text-zinc-400">Для кого</span>
-              <ChevronRight className="w-4 h-4 text-zinc-600" />
+              <span className="text-sm text-gray-400">Для кого</span>
+              <ChevronRight className="w-4 h-4 text-gray-300" />
             </div>
 
             <h2
-              className="text-3xl sm:text-4xl lg:text-[44px] text-white max-w-md"
+              className="text-3xl sm:text-4xl lg:text-[44px] text-gray-900 max-w-md"
               style={{
                 letterSpacing: "-0.0325em",
                 fontVariationSettings: '"opsz" 28',
@@ -171,7 +164,7 @@ export function WorkflowsSection() {
             </h2>
           </div>
 
-          <p className="text-zinc-400 lg:max-w-md lg:pt-12 leading-relaxed">
+          <p className="text-gray-500 lg:max-w-md lg:pt-12 leading-relaxed">
             Мероприятие создано для руководителей и специалистов стоматологических клиник, которые хотят управлять через данные.
           </p>
         </div>
@@ -184,7 +177,7 @@ export function WorkflowsSection() {
           >
             {carouselCards.map((card) => (
               <div key={card.id} className="flex-shrink-0 w-[calc(25%-12px)] min-w-[280px]">
-                <div className="bg-zinc-900/50 border border-zinc-800/50 rounded-xl overflow-hidden h-[340px] flex flex-col">
+                <div className="bg-white border border-gray-200 rounded-xl overflow-hidden h-[340px] flex flex-col shadow-sm">
                   {/* Mockup area */}
                   <div className="flex-1 relative overflow-hidden">
                     <CardMockup type={card.mockup} />
@@ -192,21 +185,19 @@ export function WorkflowsSection() {
                     <div
                       className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
                       style={{
-                        background: "linear-gradient(to top, rgba(9,9,11,0.9), transparent)",
+                        background: "linear-gradient(to top, rgba(255,255,255,0.95), transparent)",
                       }}
                     />
                   </div>
 
                   {/* Card footer - refactored for proper icon alignment */}
-                  <div className="p-4 border-t border-zinc-800/30">
+                  <div className="p-4 border-t border-gray-100">
                     <div className="flex items-center justify-between gap-3">
-                      {/* Text content */}
                       <div className="flex-1 min-w-0">
-                        <p className="text-xs text-zinc-500 mb-1">{card.category}</p>
-                        <p className="text-sm text-zinc-200 leading-snug">{card.title}</p>
+                        <p className="text-xs text-gray-400 mb-1">{card.category}</p>
+                        <p className="text-sm text-gray-800 leading-snug">{card.title}</p>
                       </div>
-                      {/* Icon button - fixed size, vertically centered */}
-                      <button className="flex-shrink-0 w-8 h-8 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-500 hover:text-zinc-300 hover:border-zinc-600 transition-colors">
+                      <button className="flex-shrink-0 w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-gray-700 hover:border-gray-400 transition-colors">
                         <card.icon className="w-4 h-4" />
                       </button>
                     </div>
@@ -221,14 +212,14 @@ export function WorkflowsSection() {
         <div className="flex items-center justify-center gap-2 mt-8">
           <button
             onClick={scrollLeft}
-            className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:text-white hover:border-zinc-500 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+            className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-gray-900 hover:border-gray-400 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
             disabled={scrollPosition === 0}
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
           <button
             onClick={scrollRight}
-            className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:text-white hover:border-zinc-500 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+            className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-gray-900 hover:border-gray-400 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
             disabled={scrollPosition >= carouselCards.length - 4}
           >
             <ChevronRight className="w-5 h-5" />
