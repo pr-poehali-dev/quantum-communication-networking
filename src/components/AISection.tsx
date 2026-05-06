@@ -12,7 +12,7 @@ const questions = [
 
 export function AISection() {
   return (
-    <div className="relative z-20 py-40" style={{ backgroundColor: "#FAFBFF" }}>
+    <div className="relative z-20 py-[120px]" style={{ backgroundColor: "#FAFBFF" }}>
       <div className="absolute top-0 left-0 right-0 pointer-events-none" style={{ height: "20%", background: "linear-gradient(to bottom, rgba(0,0,0,0.015) 0%, transparent 100%)" }} />
       <div className="w-full flex justify-center px-6">
         <div className="w-full max-w-5xl">
@@ -94,15 +94,15 @@ export function AISection() {
                     <span className="text-gray-500 text-sm font-medium">Путь пациента</span>
                   </div>
                   {[
-                    { label: "Откуда пришёл", status: "✓", color: "text-green-500" },
-                    { label: "Записался ли", status: "✓", color: "text-green-500" },
-                    { label: "Дошёл до приёма", status: "✓", color: "text-green-500" },
-                    { label: "Оплатил ли", status: "!", color: "text-yellow-500" },
-                    { label: "Вернулся ли", status: "✗", color: "text-red-500" },
+                    { label: "Откуда пришёл",   icon: "✓", bg: "bg-green-50",  border: "border-green-200", text: "text-green-600" },
+                    { label: "Записался ли",     icon: "✓", bg: "bg-green-50",  border: "border-green-200", text: "text-green-600" },
+                    { label: "Дошёл до приёма",  icon: "✓", bg: "bg-green-50",  border: "border-green-200", text: "text-green-600" },
+                    { label: "Оплатил ли",       icon: "!",  bg: "bg-yellow-50", border: "border-yellow-200", text: "text-yellow-600" },
+                    { label: "Вернулся ли",      icon: "✗", bg: "bg-red-50",    border: "border-red-200",    text: "text-red-500" },
                   ].map((step) => (
-                    <div key={step.label} className="flex items-center justify-between py-2.5 border-b border-gray-100 last:border-0">
-                      <span className="text-gray-500 text-sm">{step.label}</span>
-                      <span className={`text-sm font-medium ${step.color}`}>{step.status}</span>
+                    <div key={step.label} className="flex items-center gap-3 py-2 border-b border-gray-100 last:border-0">
+                      <span className={`w-6 h-6 rounded-md border flex items-center justify-center text-xs font-bold flex-shrink-0 ${step.bg} ${step.border} ${step.text}`}>{step.icon}</span>
+                      <span className="text-gray-600 text-sm">{step.label}</span>
                     </div>
                   ))}
                 </div>
@@ -118,9 +118,11 @@ export function AISection() {
                   </div>
                   <div className="space-y-2">
                     {["Рост выручки","Средний чек","Первичные пациенты","Повторные визиты","Конверсию планов лечения","Эффективность акций"].map((item) => (
-                      <div key={item} className="flex items-center gap-2 py-1.5">
-                        <Check className="w-3.5 h-3.5 text-indigo-500 flex-shrink-0" />
-                        <span className="text-gray-500 text-sm">{item}</span>
+                      <div key={item} className="flex items-center gap-3 py-1.5">
+                        <span className="w-6 h-6 rounded-md border border-indigo-200 bg-indigo-50 flex items-center justify-center flex-shrink-0">
+                          <Check className="w-3.5 h-3.5 text-indigo-600" />
+                        </span>
+                        <span className="text-gray-600 text-sm">{item}</span>
                       </div>
                     ))}
                   </div>

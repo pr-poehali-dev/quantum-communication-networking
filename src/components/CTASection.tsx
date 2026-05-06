@@ -1,6 +1,6 @@
 export function CTASection() {
   return (
-    <section className="py-40 px-6" style={{ backgroundColor: "#FAFBFF" }}>
+    <section className="py-[120px] px-6" style={{ backgroundColor: "#FAFBFF" }}>
       <div className="max-w-6xl mx-auto">
         <div className="border border-gray-200 rounded-2xl p-12 bg-white text-center shadow-sm">
           <div className="flex items-center justify-center gap-2 mb-8">

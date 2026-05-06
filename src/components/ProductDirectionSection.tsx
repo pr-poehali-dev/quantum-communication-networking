@@ -2,7 +2,7 @@ import { ChevronRight } from "lucide-react"
 
 export function ProductDirectionSection() {
   return (
-    <section className="relative py-40 px-6 md:px-12 lg:px-24" id="program">
+    <section className="relative py-[120px] px-6 md:px-12 lg:px-24" id="program">
       <div
         className="absolute inset-x-0 top-0 pointer-events-none"
         style={{
