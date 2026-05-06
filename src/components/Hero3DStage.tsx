@@ -55,35 +55,59 @@ export function Hero3DStage() {
           {/* Hero text - contained and centered */}
           <div className="w-full flex justify-center px-6 mt-16">
             <div className="w-full max-w-4xl">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-sm mb-6"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
+                Онлайн-вебинар · 12 мая 2025
+              </motion.div>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-4xl md:text-5xl lg:text-[56px] font-medium text-white leading-[1.1] text-balance"
               >
-                Orbit - инструмент для планирования и создания продуктов
+                Круглый стол Future IT Dent
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="mt-6 text-lg text-zinc-400"
+                transition={{ duration: 0.6, delay: 0.05 }}
+                className="mt-4 text-xl text-zinc-300 font-medium"
               >
-                Система для современной разработки.
-                <br />
-                Управляйте задачами, проектами и дорожными картами.
+                Как управлять ростом стоматологии через аналитику и PDSA
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="mt-4 text-base text-zinc-500 max-w-xl"
+              >
+                Покажем, как с помощью аналитики движения пациентов и PDSA видеть полный путь пациента, находить точки потери выручки и принимать решения на основе данных, а не ощущений.
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+                className="mt-3 text-sm text-zinc-600"
+              >
+                Для владельцев, управляющих, главных врачей и маркетологов стоматологических клиник · Формат: онлайн
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="mt-8 flex items-center gap-6"
+                className="mt-8 flex items-center gap-4"
+                id="register"
               >
-                <button className="px-5 py-2.5 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors text-sm">
-                  Начать работу
+                <button className="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-500 transition-colors text-sm">
+                  Зарегистрироваться на круглый стол
                 </button>
-                <button className="text-zinc-300 font-medium hover:text-white transition-colors flex items-center gap-2 text-sm">
-                  <span className="text-zinc-500">Новинка:</span> Orbit-агент для Slack
+                <button className="text-zinc-400 font-medium hover:text-white transition-colors flex items-center gap-2 text-sm">
+                  Узнать программу
                   <span aria-hidden="true">→</span>
                 </button>
               </motion.div>

@@ -1,28 +1,19 @@
 export function Footer() {
   const footerLinks = {
-    "Возможности": ["Планирование", "Разработка", "Аналитика", "Запросы клиентов", "Orbit Asks", "Безопасность", "Мобильное приложение"],
-    "Продукт": ["Тарифы", "Методология", "Интеграции", "История изменений", "Документация", "Скачать", "Перейти на Orbit"],
-    "Компания": ["О нас", "Клиенты", "Карьера", "Новости", "README", "Качество", "Бренд"],
-    "Ресурсы": ["Разработчикам", "Статус", "Стартапам", "Сообщить об уязвимости", "DPA", "Конфиденциальность", "Условия"],
-    "Связаться": ["Контакты", "Сообщество", "X (Twitter)", "GitHub", "YouTube"],
+    "Продукт": ["Аналитика движения пациентов", "PDSA-модуль", "Когортный анализ", "Интеграция с МИС", "Интеграция с CRM"],
+    "Мероприятие": ["Программа круглого стола", "Зарегистрироваться", "Формат: онлайн", "Длительность: 60–90 мин"],
+    "Для кого": ["Владельцы клиник", "Управляющие", "Главные врачи", "Маркетологи"],
+    "Контакты": ["Написать нам", "Telegram", "Поддержка"],
   }
 
   return (
     <footer className="border-t border-zinc-800 py-16 px-6" style={{ backgroundColor: "#09090B" }}>
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
-          {/* Logo */}
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+          {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <svg width="20" height="20" viewBox="0 0 100 100" fill="none" className="text-white">
-              <path
-                d="M20 30 L50 10 L80 30 L80 70 L50 90 L20 70 Z"
-                fill="currentColor"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-              <path d="M50 10 L50 50 L20 30" fill="#09090B" />
-              <path d="M50 50 L80 70 L50 90" fill="#09090B" />
-            </svg>
+            <span className="text-white font-semibold text-sm">Future IT Dent</span>
+            <p className="text-zinc-600 text-xs mt-2 leading-relaxed">Аналитика и PDSA для стоматологических клиник</p>
           </div>
 
           {/* Links */}
@@ -40,6 +31,9 @@ export function Footer() {
               </ul>
             </div>
           ))}
+        </div>
+        <div className="mt-12 pt-8 border-t border-zinc-800/60 text-zinc-600 text-xs">
+          © 2025 Future IT Dent. Все права защищены.
         </div>
       </div>
     </footer>

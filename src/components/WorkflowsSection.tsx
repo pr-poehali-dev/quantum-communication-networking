@@ -1,193 +1,116 @@
 import { useState } from "react"
-import { ChevronLeft, ChevronRight, Plus, ArrowRight, MessageSquare, GitBranch, X, Puzzle, Figma } from "lucide-react"
+import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react"
 
 const carouselCards = [
   {
     id: 1,
-    category: "Запросы клиентов",
-    title: "Создавайте то, что нужно клиентам",
+    category: "Владельцы клиник",
+    title: "Видеть не только итоговую выручку, но и путь к ней",
     icon: ArrowRight,
-    mockup: "intercom",
+    mockup: "owner",
   },
   {
     id: 2,
-    category: "Git-интеграция",
-    title: "Автоматизируйте PR и коммиты",
-    icon: Plus,
-    mockup: "github",
+    category: "Управляющие",
+    title: "Контролировать процессы через данные, а не вручную",
+    icon: ArrowRight,
+    mockup: "manager",
   },
   {
     id: 3,
-    category: "Orbit Mobile",
-    title: "Управляйте работой откуда угодно",
+    category: "Маркетологи",
+    title: "Понимать, какие каналы приносят не заявки, а деньги",
     icon: ArrowRight,
-    mockup: "mobile",
+    mockup: "marketer",
   },
   {
     id: 4,
-    category: "Orbit Asks",
-    title: "Превращайте запросы в задачи",
+    category: "Главные врачи",
+    title: "Видеть влияние лечения и рекомендаций на выручку",
     icon: ArrowRight,
-    mockup: "asks",
-  },
-  {
-    id: 5,
-    category: "Интеграции Orbit",
-    title: "100+ способов расширить возможности",
-    icon: ArrowRight,
-    mockup: "integrations",
-  },
-  {
-    id: 6,
-    category: "Интеграция с Figma",
-    title: "Связь между разработкой и дизайном",
-    icon: ArrowRight,
-    mockup: "figma",
-  },
-  {
-    id: 7,
-    category: "Для разработчиков",
-    title: "Создавайте плагины через Orbit API",
-    icon: ArrowRight,
-    mockup: "api",
+    mockup: "doctor",
   },
 ]
 
-function IntercomMockup() {
+function OwnerMockup() {
   return (
     <div className="flex flex-col gap-3 p-4">
-      <div className="flex items-center gap-2 text-xs text-zinc-400">
-        <MessageSquare className="w-3.5 h-3.5" />
-        <span>Intercom</span>
-        <span className="text-zinc-600">·</span>
-        <span className="text-zinc-500">sarah@example.com</span>
-      </div>
-      <p className="text-sm text-zinc-300">
-        Нужна разбивка затрат <span className="text-zinc-500">по...</span>
-      </p>
-
-      <div className="mt-2 flex items-center gap-2 bg-zinc-800/50 rounded-lg px-3 py-2">
-        <div className="w-5 h-5 bg-zinc-700 rounded flex items-center justify-center">
-          <span className="text-[10px] text-zinc-400">A</span>
+      <div className="text-xs text-zinc-500 mb-1">Выручка клиники — июнь</div>
+      {[
+        { label: "Первичные", val: "₽ 1 240 000", up: true },
+        { label: "Повторные", val: "₽ 3 870 000", up: true },
+        { label: "Лояльные", val: "₽ 2 100 000", up: false },
+      ].map((row) => (
+        <div key={row.label} className="flex items-center justify-between bg-zinc-800/40 rounded-lg px-3 py-2">
+          <span className="text-xs text-zinc-400">{row.label}</span>
+          <span className={`text-xs font-medium ${row.up ? "text-green-400" : "text-zinc-300"}`}>{row.val}</span>
         </div>
-        <span className="text-sm text-zinc-300">ACME</span>
-        <span className="text-xs text-zinc-500">Новый запрос</span>
-      </div>
-
-      <div className="mt-1 flex items-center gap-2 bg-zinc-800/30 rounded-lg px-3 py-2">
-        <div className="w-5 h-5 bg-yellow-500/20 rounded flex items-center justify-center">
-          <span className="text-[10px] text-yellow-500">◆</span>
-        </div>
-        <span className="text-sm text-zinc-400">Мультиоблачные</span>
-        <span className="text-xs text-zinc-500">затраты</span>
-      </div>
-
-      <div className="mt-1 flex items-center gap-2 px-3 py-2">
-        <div className="w-4 h-4 rounded-full border border-zinc-600" />
-        <span className="text-sm text-zinc-500">Планирование</span>
-        <div className="ml-2 flex items-center gap-1 text-xs text-zinc-600">
-          <span>Q4 2025</span>
-        </div>
-      </div>
+      ))}
     </div>
   )
 }
 
-function GitHubMockup() {
+function ManagerMockup() {
   return (
     <div className="flex flex-col gap-2 p-4">
-      <div className="flex items-center gap-2 text-xs">
-        <GitBranch className="w-3.5 h-3.5 text-zinc-500" />
-        <span className="text-zinc-400">#20319</span>
-        <span className="text-zinc-500">igor/lin 15287</span>
-        <span className="text-blue-400/70">add sourc...</span>
-      </div>
-
-      <div className="mt-3 space-y-2">
-        <div className="flex items-center gap-2 text-xs">
-          <span className="text-zinc-600">↗</span>
-          <span className="text-zinc-500">igor</span>
-          <span className="text-zinc-600">связал</span>
-          <span className="text-blue-400/70">igor/lin 15287</span>
-          <span className="text-zinc-600">add sou...</span>
-        </div>
-        <div className="flex items-center gap-2 text-xs">
-          <span className="text-zinc-600">↗</span>
-          <span className="text-zinc-500">igor</span>
-          <span className="text-zinc-600">изменил статус с В работе...</span>
-        </div>
-        <div className="flex items-center gap-2 text-xs">
-          <span className="text-zinc-600">↗</span>
-          <span className="text-zinc-500">GitHub</span>
-          <span className="text-zinc-600">изменил статус с На ревью...</span>
-        </div>
-        <div className="flex items-center gap-2 text-xs">
-          <span className="text-zinc-600">↗</span>
-          <span className="text-zinc-500">igor</span>
-          <span className="text-zinc-600">изменил статус с Готово...</span>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function MobileMockup() {
-  return (
-    <div className="flex items-center justify-center h-full">
-      <div className="relative w-32 h-56 bg-zinc-900 rounded-2xl border border-zinc-700 overflow-hidden">
-        <div className="absolute top-2 left-1/2 -translate-x-1/2 w-12 h-1 bg-zinc-800 rounded-full" />
-        <div className="mt-6 px-3">
-          <div className="text-[10px] text-zinc-400 mb-2">Входящие</div>
-          <div className="space-y-1.5">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="h-6 bg-zinc-800/50 rounded" />
-            ))}
+      <div className="text-xs text-zinc-500 mb-1">Точки потерь — этот месяц</div>
+      {[
+        { label: "Нет записи после звонка", pct: 23, color: "bg-red-500" },
+        { label: "Не дошли до приёма", pct: 14, color: "bg-orange-500" },
+        { label: "Нет возврата 6 мес+", pct: 38, color: "bg-yellow-500" },
+      ].map((row) => (
+        <div key={row.label} className="flex items-center gap-3">
+          <span className="text-xs text-zinc-500 w-36 flex-shrink-0">{row.label}</span>
+          <div className="flex-1 h-1.5 bg-zinc-800 rounded-full">
+            <div className={`h-full rounded-full ${row.color}`} style={{ width: `${row.pct * 2}%` }} />
           </div>
+          <span className="text-xs text-zinc-400">{row.pct}%</span>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+function MarketerMockup() {
+  return (
+    <div className="flex flex-col gap-2 p-4">
+      <div className="text-xs text-zinc-500 mb-1">Каналы → Выручка</div>
+      {[
+        { label: "Контекст", leads: 84, revenue: "₽ 420k" },
+        { label: "Соцсети", leads: 210, revenue: "₽ 190k" },
+        { label: "Сарафан", leads: 41, revenue: "₽ 680k" },
+      ].map((row) => (
+        <div key={row.label} className="flex items-center justify-between bg-zinc-800/40 rounded-lg px-3 py-2">
+          <span className="text-xs text-zinc-400">{row.label}</span>
+          <span className="text-xs text-zinc-600">{row.leads} заявок</span>
+          <span className="text-xs font-medium text-indigo-400">{row.revenue}</span>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+function DoctorMockup() {
+  return (
+    <div className="flex flex-col gap-3 p-4">
+      <div className="text-xs text-zinc-500 mb-1">Рекомендации → Возврат</div>
+      <div className="bg-zinc-800/40 rounded-lg px-3 py-3">
+        <div className="text-xs text-zinc-300 mb-1">Гигиена каждые 6 мес</div>
+        <div className="flex items-center gap-2">
+          <div className="flex-1 h-1.5 bg-zinc-700 rounded-full">
+            <div className="h-full rounded-full bg-green-500" style={{ width: "72%" }} />
+          </div>
+          <span className="text-xs text-green-400">72% вернулись</span>
         </div>
       </div>
-    </div>
-  )
-}
-
-function AsksMockup() {
-  return (
-    <div className="flex items-center justify-center h-full">
-      <div className="w-24 h-24 rounded-2xl bg-zinc-800 flex items-center justify-center">
-        <X className="w-12 h-12 text-zinc-400" strokeWidth={2.5} />
-      </div>
-    </div>
-  )
-}
-
-function IntegrationsMockup() {
-  return (
-    <div className="flex items-center justify-center h-full">
-      <div className="grid grid-cols-2 gap-2">
-        {[1, 2, 3, 4].map((i) => (
-          <div key={i} className="w-10 h-10 rounded-lg bg-zinc-800/50 flex items-center justify-center">
-            <Puzzle className="w-5 h-5 text-zinc-500" />
+      <div className="bg-zinc-800/40 rounded-lg px-3 py-3">
+        <div className="text-xs text-zinc-300 mb-1">Без рекомендации</div>
+        <div className="flex items-center gap-2">
+          <div className="flex-1 h-1.5 bg-zinc-700 rounded-full">
+            <div className="h-full rounded-full bg-red-500" style={{ width: "21%" }} />
           </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
-function FigmaMockup() {
-  return (
-    <div className="flex items-center justify-center h-full">
-      <div className="relative">
-        <Figma className="w-16 h-16 text-zinc-400" />
-      </div>
-    </div>
-  )
-}
-
-function ApiMockup() {
-  return (
-    <div className="flex items-center justify-center h-full">
-      <div className="bg-zinc-800/50 rounded-lg px-4 py-2 border border-zinc-700/50">
-        <span className="text-xs font-mono text-zinc-400">ORBIT API</span>
+          <span className="text-xs text-red-400">21% вернулись</span>
+        </div>
       </div>
     </div>
   )
@@ -195,22 +118,11 @@ function ApiMockup() {
 
 function CardMockup({ type }: { type: string }) {
   switch (type) {
-    case "intercom":
-      return <IntercomMockup />
-    case "github":
-      return <GitHubMockup />
-    case "mobile":
-      return <MobileMockup />
-    case "asks":
-      return <AsksMockup />
-    case "integrations":
-      return <IntegrationsMockup />
-    case "figma":
-      return <FigmaMockup />
-    case "api":
-      return <ApiMockup />
-    default:
-      return null
+    case "owner": return <OwnerMockup />
+    case "manager": return <ManagerMockup />
+    case "marketer": return <MarketerMockup />
+    case "doctor": return <DoctorMockup />
+    default: return null
   }
 }
 
@@ -240,25 +152,21 @@ export function WorkflowsSection() {
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-16">
           <div className="lg:max-w-xl">
-            {/* Orange indicator */}
-            <div className="flex items-center gap-2 mb-6">
+            <div className="flex items-center gap-2 mb-6" id="audience">
               <div className="w-2 h-2 rounded-full bg-orange-500" />
-              <span className="text-sm text-zinc-400">Процессы и интеграции</span>
+              <span className="text-sm text-zinc-400">Для кого</span>
               <ChevronRight className="w-4 h-4 text-zinc-600" />
             </div>
 
-            {/* Heading */}
             <h2 className="text-4xl md:text-5xl font-medium text-white leading-[1.1]">
-              Работайте слаженно
+              Кому подойдёт
               <br />
-              между инструментами
+              круглый стол
             </h2>
           </div>
 
-          {/* Description */}
           <p className="text-zinc-400 lg:max-w-sm lg:pt-12">
-            Расширьте возможности Orbit с помощью интеграций, которые синхронизируют всю команду и держат фокус на
-            главном.
+            Мероприятие создано для руководителей и специалистов стоматологических клиник, которые хотят управлять через данные.
           </p>
         </div>
 
