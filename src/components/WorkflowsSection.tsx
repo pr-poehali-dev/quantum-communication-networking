@@ -138,7 +138,7 @@ export function WorkflowsSection() {
   }
 
   return (
-    <section className="relative py-24" style={{ backgroundColor: "#09090B" }}>
+    <section className="relative py-40" style={{ backgroundColor: "#09090B" }}>
       {/* Top gradient */}
       <div
         className="absolute top-0 left-0 right-0 pointer-events-none"
@@ -158,14 +158,20 @@ export function WorkflowsSection() {
               <ChevronRight className="w-4 h-4 text-zinc-600" />
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-medium text-white leading-[1.1]">
-              Кому подойдёт
-              <br />
-              круглый стол
+            <h2
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] text-white max-w-md"
+              style={{
+                letterSpacing: "-0.0325em",
+                fontVariationSettings: '"opsz" 28',
+                fontWeight: 538,
+                lineHeight: 1.1,
+              }}
+            >
+              Кому подойдёт круглый стол
             </h2>
           </div>
 
-          <p className="text-zinc-400 lg:max-w-sm lg:pt-12">
+          <p className="text-zinc-400 lg:max-w-md lg:pt-12 leading-relaxed">
             Мероприятие создано для руководителей и специалистов стоматологических клиник, которые хотят управлять через данные.
           </p>
         </div>

@@ -26,7 +26,7 @@ export function LogoCloud() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg text-zinc-500 mb-16"
+            className="text-lg text-zinc-400 mb-16"
           >
             А не ощущений, догадок и интуиции.
           </motion.p>

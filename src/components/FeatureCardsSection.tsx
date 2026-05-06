@@ -46,12 +46,24 @@ export function FeatureCardsSection() {
       />
       <div className="w-full flex justify-center px-6">
         <div className="w-full max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center gap-2 mb-6"
+          >
+            <div className="w-2 h-2 rounded-full bg-red-500" />
+            <span className="text-zinc-400 text-sm">Проблема</span>
+            <ChevronRight className="w-4 h-4 text-zinc-500" />
+          </motion.div>
+
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-16">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] text-white max-w-md"
               style={{
                 letterSpacing: "-0.0325em",
@@ -66,7 +78,7 @@ export function FeatureCardsSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="max-w-md"
             >
               <p className="text-zinc-400 leading-relaxed">

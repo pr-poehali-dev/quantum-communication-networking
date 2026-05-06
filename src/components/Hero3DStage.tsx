@@ -84,7 +84,7 @@ export function Hero3DStage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="mt-4 text-base text-zinc-500 max-w-xl"
+                className="mt-4 text-base text-zinc-400 max-w-xl leading-relaxed"
               >
                 Покажем, как с помощью аналитики движения пациентов и PDSA видеть полный путь пациента, находить точки потери выручки и принимать решения на основе данных, а не ощущений.
               </motion.p>
@@ -92,23 +92,22 @@ export function Hero3DStage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.15 }}
-                className="mt-3 text-sm text-zinc-600"
+                className="mt-2 text-sm text-zinc-500"
               >
-                Для владельцев, управляющих, главных врачей и маркетологов стоматологических клиник · Формат: онлайн
+                Для владельцев, управляющих, главных врачей и маркетологов · Онлайн
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="mt-8 flex items-center gap-4"
+                className="mt-8 flex items-center gap-3"
                 id="register"
               >
                 <button className="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-500 transition-colors text-sm">
-                  Зарегистрироваться на круглый стол
+                  Зарегистрироваться
                 </button>
-                <button className="text-zinc-400 font-medium hover:text-white transition-colors flex items-center gap-2 text-sm">
-                  Узнать программу
-                  <span aria-hidden="true">→</span>
+                <button className="px-6 py-3 border border-zinc-700 text-zinc-300 font-medium rounded-lg hover:bg-zinc-800 transition-colors text-sm">
+                  Программа
                 </button>
               </motion.div>
             </div>
