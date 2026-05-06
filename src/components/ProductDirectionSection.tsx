@@ -34,79 +34,95 @@ export function ProductDirectionSection() {
           <span className="text-gray-900 font-medium">Без теории ради теории.</span> Только реальные сценарии: полный путь пациента, точки потери выручки, постановка гипотез и оценка результатов.
         </p>
 
-        {/* Program steps — 3D mockup */}
+        {/* Program steps — full-bleed 3D like Hero */}
         <div
-          className="relative w-full mb-16 overflow-hidden"
-          style={{ height: 520 }}
+          style={{
+            width: "100vw",
+            marginLeft: "calc(-50vw + 50%)",
+            position: "relative",
+            height: 680,
+            marginBottom: 0,
+            overflow: "hidden",
+          }}
         >
           {/* fade bottom */}
           <div
             className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none"
-            style={{ height: 180, background: "linear-gradient(to top, #FAFBFF 30%, transparent 100%)" }}
+            style={{ height: 260, background: "linear-gradient(to top, #FAFBFF 25%, transparent 100%)" }}
           />
 
-          {/* perspective stage */}
-          <div style={{ perspective: "1800px", perspectiveOrigin: "50% 0%", width: "100%", height: "100%" }}>
+          {/* perspective container */}
+          <div
+            style={{
+              contain: "strict",
+              perspective: "4000px",
+              perspectiveOrigin: "100% 0",
+              width: "100%",
+              height: "100%",
+              transformStyle: "preserve-3d",
+              position: "relative",
+            }}
+          >
             <div
               style={{
-                transform: "rotateX(42deg) rotateZ(-2deg) scale(1.05)",
-                transformOrigin: "50% 0%",
+                backgroundColor: "#fff",
+                transformOrigin: "0 0",
+                backfaceVisibility: "hidden",
+                WebkitBackfaceVisibility: "hidden",
+                border: "1px solid #e5e7eb",
+                borderRadius: 10,
+                boxShadow: "0 20px 60px rgba(0,0,0,0.08)",
+                width: 1200,
+                height: 640,
+                margin: "220px auto auto",
+                position: "absolute",
+                top: 0, bottom: 0, left: 0, right: 0,
+                transform: "translate(2%) scale(1.2) rotateX(47deg) rotateY(31deg) rotate(324deg)",
                 transformStyle: "preserve-3d",
-                width: "100%",
+                overflow: "hidden",
               }}
             >
-              {/* window chrome */}
-              <div
-                style={{
-                  border: "1px solid #e5e7eb",
-                  borderRadius: 12,
-                  overflow: "hidden",
-                  boxShadow: "0 32px 80px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.04)",
-                  background: "#fff",
-                }}
-              >
-                {/* titlebar */}
-                <div style={{ display: "flex", alignItems: "center", gap: 6, padding: "10px 16px", borderBottom: "1px solid #f0f0f0", background: "#fafafa" }}>
-                  <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#fca5a5" }} />
-                  <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#fde68a" }} />
-                  <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#86efac" }} />
-                  <span style={{ marginLeft: 8, fontSize: 11, color: "#9ca3af" }}>Программа вебинара · 12 мая 2026</span>
-                </div>
+              {/* titlebar */}
+              <div style={{ display: "flex", alignItems: "center", gap: 6, padding: "12px 20px", borderBottom: "1px solid #f0f0f4", background: "#fafafa" }}>
+                <div style={{ width: 11, height: 11, borderRadius: "50%", background: "#fca5a5" }} />
+                <div style={{ width: 11, height: 11, borderRadius: "50%", background: "#fde68a" }} />
+                <div style={{ width: 11, height: 11, borderRadius: "50%", background: "#86efac" }} />
+                <span style={{ marginLeft: 10, fontSize: 12, color: "#9ca3af", fontFamily: "Inter, sans-serif" }}>Программа вебинара · 12 мая 2026</span>
+              </div>
 
-                {/* rows */}
-                <div style={{ padding: "16px 20px", display: "flex", flexDirection: "column", gap: 10 }}>
-                  {[
-                    { num: "01", title: "Полный путь пациента", desc: "Откуда пришёл, записался ли, дошёл ли, оплатил ли — сквозная воронка без пробелов", accent: "#3b82f6", time: "12:00" },
-                    { num: "02", title: "Точки потери выручки", desc: "Где именно клиника теряет деньги: между обращением и записью, между записью и приёмом, после приёма", accent: "#6366f1", time: "12:20" },
-                    { num: "03", title: "Постановка гипотез", desc: "Как сформулировать проверяемую гипотезу роста и не слить бюджет на изменения, которые не работают", accent: "#8b5cf6", time: "12:40" },
-                    { num: "04", title: "Оценка результатов", desc: "PDSA-цикл в действии: как понять, сработало ли изменение, и принять решение о масштабировании", accent: "#22c55e", time: "13:00" },
-                  ].map((item, i) => (
-                    <div
-                      key={item.num}
-                      style={{
-                        display: "flex",
-                        alignItems: "flex-start",
-                        gap: 14,
-                        padding: "14px 16px",
-                        borderRadius: 10,
-                        border: "1px solid #f0f0f4",
-                        background: i === 0 ? "#fafbff" : "#fff",
-                        boxShadow: i === 0 ? "0 2px 12px rgba(99,102,241,0.07)" : "none",
-                      }}
-                    >
-                      <div style={{ width: 3, borderRadius: 99, alignSelf: "stretch", flexShrink: 0, background: item.accent, minHeight: 40 }} />
-                      <div style={{ fontSize: 13, fontWeight: 600, color: "#d1d5db", flexShrink: 0, width: 24 }}>{item.num}</div>
-                      <div style={{ flex: 1 }}>
-                        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, marginBottom: 4 }}>
-                          <span style={{ fontSize: 13, fontWeight: 600, color: "#111827" }}>{item.title}</span>
-                          <span style={{ fontSize: 11, color: "#9ca3af", background: "#f9fafb", border: "1px solid #e5e7eb", borderRadius: 999, padding: "1px 8px", flexShrink: 0 }}>~20 мин</span>
-                        </div>
-                        <p style={{ fontSize: 12, color: "#6b7280", lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
+              {/* content */}
+              <div style={{ padding: "24px 28px", display: "flex", flexDirection: "column", gap: 14, fontFamily: "Inter, sans-serif" }}>
+                {[
+                  { num: "01", title: "Полный путь пациента", desc: "Откуда пришёл, записался ли, дошёл ли, оплатил ли — сквозная воронка без пробелов", accent: "#3b82f6", time: "12:00" },
+                  { num: "02", title: "Точки потери выручки", desc: "Где именно клиника теряет деньги: между обращением и записью, между записью и приёмом, после приёма", accent: "#6366f1", time: "12:20" },
+                  { num: "03", title: "Постановка гипотез", desc: "Как сформулировать проверяемую гипотезу роста и не слить бюджет на изменения, которые не работают", accent: "#8b5cf6", time: "12:40" },
+                  { num: "04", title: "Оценка результатов", desc: "PDSA-цикл в действии: как понять, сработало ли изменение, и принять решение о масштабировании", accent: "#22c55e", time: "13:00" },
+                ].map((item, i) => (
+                  <div
+                    key={item.num}
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      gap: 16,
+                      padding: "18px 20px",
+                      borderRadius: 10,
+                      border: `1px solid ${i === 0 ? "#e0e7ff" : "#f0f0f4"}`,
+                      background: i === 0 ? "#fafbff" : "#fff",
+                      boxShadow: i === 0 ? "0 2px 16px rgba(99,102,241,0.08)" : "none",
+                    }}
+                  >
+                    <div style={{ width: 3, borderRadius: 99, alignSelf: "stretch", flexShrink: 0, background: item.accent, minHeight: 48 }} />
+                    <div style={{ fontSize: 15, fontWeight: 700, color: "#d1d5db", flexShrink: 0, width: 28 }}>{item.num}</div>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, marginBottom: 6 }}>
+                        <span style={{ fontSize: 15, fontWeight: 600, color: "#111827" }}>{item.title}</span>
+                        <span style={{ fontSize: 12, color: "#9ca3af", background: "#f9fafb", border: "1px solid #e5e7eb", borderRadius: 999, padding: "2px 10px", flexShrink: 0 }}>~20 мин</span>
                       </div>
-                      <div style={{ fontSize: 11, color: "#9ca3af", flexShrink: 0, fontVariantNumeric: "tabular-nums" }}>{item.time}</div>
+                      <p style={{ fontSize: 13, color: "#6b7280", lineHeight: 1.65, margin: 0 }}>{item.desc}</p>
                     </div>
-                  ))}
-                </div>
+                    <div style={{ fontSize: 13, color: "#9ca3af", flexShrink: 0, fontVariantNumeric: "tabular-nums", paddingTop: 2 }}>{item.time}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
