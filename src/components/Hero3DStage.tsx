@@ -131,7 +131,7 @@ export function Hero3DStage() {
 
           {/* 3D Stage — скрыт на мобиле */}
           <div
-            className="relative hidden sm:block"
+            className="hidden sm:block"
             style={{
               width: "100vw",
               marginLeft: "-50vw",
@@ -141,6 +141,7 @@ export function Hero3DStage() {
               right: "50%",
               height: "700px",
               marginTop: "-60px",
+              overflow: "hidden",
             }}
           >
             <div
@@ -151,7 +152,6 @@ export function Hero3DStage() {
               style={{
                 transform: `translateY(${yOffset}px)`,
                 transition: "transform 0.1s ease-out",
-                contain: "strict",
                 perspective: "4000px",
                 perspectiveOrigin: "100% 0",
                 width: "100%",
