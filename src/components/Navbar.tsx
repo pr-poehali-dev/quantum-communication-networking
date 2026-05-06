@@ -8,7 +8,9 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-gray-200 bg-[#FAFBFF]/80 backdrop-blur-md">
       <div className="w-full flex justify-center px-4 sm:px-6 py-3 sm:py-4">
         <div className="w-full max-w-4xl flex items-center justify-between">
-          <a href="https://future-it-dent.ru/" target="_blank" rel="noopener noreferrer" className="text-gray-900 font-semibold tracking-tight text-sm sm:text-base hover:text-gray-600 transition-colors">Future IT Dent</a>
+          <a href="https://future-it-dent.ru/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+            <img src="https://cdn.poehali.dev/projects/1469ebbc-f5f2-410f-a6b6-ad7c1a2f72dd/bucket/e54a53a2-53ad-4053-b48a-81a44cf1b129.png" alt="Future IT Dent" className="h-8 sm:h-10 w-auto" />
+          </a>
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-8">
