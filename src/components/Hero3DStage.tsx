@@ -105,17 +105,17 @@ export function Hero3DStage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="mt-6 sm:mt-8 flex flex-wrap items-center gap-3"
-                id="register"
+                className="mt-6 sm:mt-8 flex flex-wrap items-center gap-3 relative z-20"
               >
-                <button
+                <a
+                  href="#register"
                   className="px-5 sm:px-6 py-2.5 sm:py-3 font-medium rounded-lg text-sm transition-colors"
                   style={{ background: "#4F46E5", color: "#fff" }}
                   onMouseEnter={e => (e.currentTarget.style.background = "#4338CA")}
                   onMouseLeave={e => (e.currentTarget.style.background = "#4F46E5")}
                 >
                   Зарегистрироваться
-                </button>
+                </a>
                 <a
                   href="#program"
                   className="px-5 sm:px-6 py-2.5 sm:py-3 font-medium rounded-lg text-sm transition-colors"
