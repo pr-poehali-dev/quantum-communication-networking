@@ -72,7 +72,7 @@ export function FeatureCardsSection() {
                 lineHeight: 1.1,
               }}
             >
-              Клиники теряют деньги<br />не в рекламе —<br />а внутри процессов
+              Клиники теряют деньги<br />не в рекламе<br />а внутри процессов
             </motion.h2>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
