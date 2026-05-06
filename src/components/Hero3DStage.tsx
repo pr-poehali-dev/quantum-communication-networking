@@ -63,7 +63,7 @@ export function Hero3DStage() {
                 style={{ borderColor: "rgba(99,102,241,0.25)", background: "rgba(99,102,241,0.06)", color: "#4F46E5" }}
               >
                 <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "#6366F1" }} />
-                Онлайн-вебинар · 12 мая 2026 · 12:00
+                Онлайн-вебинар · 19 мая 2026 · 12:00
               </motion.div>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
