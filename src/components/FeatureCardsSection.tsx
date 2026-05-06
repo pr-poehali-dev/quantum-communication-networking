@@ -105,9 +105,7 @@ export function FeatureCardsSection() {
                 <h3 className="text-white font-medium text-base mb-2">На круглом столе покажем выход</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed">Как превратить данные в управляемый рост.</p>
               </div>
-              <a href="#register" className="mt-6 text-indigo-400 text-sm hover:text-indigo-300 transition-colors flex items-center gap-1">
-                Зарегистрироваться <ChevronRight className="w-3 h-3" />
-              </a>
+
             </motion.div>
           </div>
         </div>
