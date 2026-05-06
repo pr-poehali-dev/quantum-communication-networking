@@ -59,7 +59,7 @@ function MarketerMockup() {
         <div key={row.label} className="flex items-center justify-between bg-gray-50 border border-gray-100 rounded-lg px-3 py-2">
           <span className="text-xs text-gray-500">{row.label}</span>
           <span className="text-xs text-gray-400">{row.leads} заявок</span>
-          <span className="text-xs font-semibold text-indigo-600">{row.revenue}</span>
+          <span className="text-xs font-semibold text-[#49B76E]">{row.revenue}</span>
         </div>
       ))}
     </div>

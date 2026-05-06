@@ -53,9 +53,9 @@ export function FeatureCardsSection() {
             ))}
             <motion.div
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.6 }}
-              className="border border-indigo-200 rounded-2xl p-6 bg-indigo-50/60"
+              className="border border-[#c2ecd1] rounded-2xl p-6 bg-[#f0fbf4]/60"
             >
-              <div className="w-2 h-2 rounded-full bg-indigo-500 mb-4" />
+              <div className="w-2 h-2 rounded-full bg-[#5dc47e] mb-4" />
               <h3 className="text-gray-900 font-medium text-base mb-2">На круглом столе покажем выход</h3>
               <p className="text-gray-500 text-sm leading-relaxed">Как превратить данные в управляемый рост.</p>
             </motion.div>

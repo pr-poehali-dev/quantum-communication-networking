@@ -163,7 +163,7 @@ export function ProductDirectionSection() {
               <h4 className="text-lg font-medium text-gray-800 mb-5">Сегменты пациентов</h4>
               {[
                 { label: "Первичные", color: "bg-blue-500", pct: "34%" },
-                { label: "Повторные", color: "bg-indigo-500", pct: "41%" },
+                { label: "Повторные", color: "bg-[#5dc47e]", pct: "41%" },
                 { label: "Лояльные", color: "bg-green-500", pct: "18%" },
                 { label: "ДМС", color: "bg-yellow-500", pct: "7%" },
               ].map((seg) => (
@@ -254,7 +254,7 @@ export function ProductDirectionSection() {
           <div className="pt-8 md:pt-10 pl-0 md:pl-10 pb-10 md:pb-16 flex justify-center md:block">
             <div className="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm w-full max-w-sm md:max-w-none">
               <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100 text-gray-500 text-sm">
-                <span className="w-2 h-2 rounded-full bg-indigo-400" />
+                <span className="w-2 h-2 rounded-full bg-[#6ecc89]" />
                 <span>PDSA Future IT Dent</span>
                 <span className="ml-auto text-gray-400">Гипотеза #7</span>
               </div>
@@ -265,7 +265,7 @@ export function ProductDirectionSection() {
                 </div>
                 {[
                   { step: "Plan", label: "Запустить напоминания в мае", color: "bg-blue-500", done: true },
-                  { step: "Do", label: "Внедрено для 120 пациентов", color: "bg-indigo-500", done: true },
+                  { step: "Do", label: "Внедрено для 120 пациентов", color: "bg-[#5dc47e]", done: true },
                   { step: "Study", label: "Неявки: было 23% → стало 11%", color: "bg-green-500", done: true },
                   { step: "Act", label: "Масштабировать на всю клинику", color: "bg-orange-500", done: false },
                 ].map((row) => (
@@ -279,7 +279,7 @@ export function ProductDirectionSection() {
                 ))}
                 <div className="flex flex-col gap-2 mt-6">
                   <div className="flex gap-2 flex-wrap">
-                    <div className="h-2 bg-indigo-200 rounded w-20" />
+                    <div className="h-2 bg-[#c2ecd1] rounded w-20" />
                     <div className="h-2 bg-gray-100 rounded w-16" />
                     <div className="h-2 bg-gray-100 rounded w-24" />
                   </div>
@@ -297,7 +297,7 @@ export function ProductDirectionSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16">
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <span className="w-2 h-2 rounded-full bg-indigo-400" />
+              <span className="w-2 h-2 rounded-full bg-[#6ecc89]" />
               <span className="text-gray-800 font-medium">Первичные</span>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed">Откуда пришли, записались ли, дошли ли до приёма.</p>

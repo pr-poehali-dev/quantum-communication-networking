@@ -37,7 +37,7 @@ export function AISection() {
           <motion.a
             href="#register"
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}
-            className="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-500 transition-colors text-sm flex items-center gap-2 mb-16 w-fit"
+            className="px-6 py-3 bg-[#49B76E] text-white font-medium rounded-lg hover:bg-[#5dc47e] transition-colors text-sm flex items-center gap-2 mb-16 w-fit"
           >
             Зарегистрироваться
             <ChevronRight className="w-4 h-4" />
@@ -70,10 +70,10 @@ export function AISection() {
                     >
                       <div className="flex items-center justify-between h-full" style={{ paddingLeft: "24px", paddingRight: "24px", gap: "12px" }}>
                         <div className="flex items-center gap-3">
-                          <span className="text-indigo-400 text-lg">—</span>
+                          <span className="text-[#6ecc89] text-lg">—</span>
                           <span className={item.selected ? "text-gray-900 font-medium text-sm" : "text-gray-600 text-sm"}>{item.q}</span>
                         </div>
-                        {item.selected && <Check className="w-4 h-4 text-indigo-500" />}
+                        {item.selected && <Check className="w-4 h-4 text-[#5dc47e]" />}
                       </div>
                     </div>
                   ))}
@@ -90,7 +90,7 @@ export function AISection() {
                 <p className="text-gray-500 text-base mb-8">Автоматическое разделение на группы, сквозной путь от обращения до повторного визита, детализация до конкретного пациента.</p>
                 <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
                   <div className="flex items-center gap-2 mb-5">
-                    <span className="w-2 h-2 rounded-full bg-indigo-400" />
+                    <span className="w-2 h-2 rounded-full bg-[#6ecc89]" />
                     <span className="text-gray-500 text-sm font-medium">Путь пациента</span>
                   </div>
                   {[
@@ -119,8 +119,8 @@ export function AISection() {
                   <div className="space-y-2">
                     {["Рост выручки","Средний чек","Первичные пациенты","Повторные визиты","Конверсию планов лечения","Эффективность акций"].map((item) => (
                       <div key={item} className="flex items-center gap-3 py-1.5">
-                        <span className="w-6 h-6 rounded-md border border-indigo-200 bg-indigo-50 flex items-center justify-center flex-shrink-0">
-                          <Check className="w-3.5 h-3.5 text-indigo-600" />
+                        <span className="w-6 h-6 rounded-md border border-[#c2ecd1] bg-[#e6f7ed] flex items-center justify-center flex-shrink-0">
+                          <Check className="w-3.5 h-3.5 text-[#49B76E]" />
                         </span>
                         <span className="text-gray-600 text-sm">{item}</span>
                       </div>

@@ -20,7 +20,7 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-3">
-            <a href="#register" className="text-sm text-white bg-indigo-600 hover:bg-indigo-500 px-3.5 py-1.5 rounded-md transition-colors font-medium">
+            <a href="#register" className="text-sm text-white bg-[#49B76E] hover:bg-[#5dc47e] px-3.5 py-1.5 rounded-md transition-colors font-medium">
               Зарегистрироваться
             </a>
             {/* Hamburger */}

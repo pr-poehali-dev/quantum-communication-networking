@@ -4,7 +4,7 @@ export function CTASection() {
       <div className="max-w-6xl mx-auto">
         <div className="border border-gray-200 rounded-2xl p-6 sm:p-12 bg-white text-center shadow-sm">
           <div className="flex items-center justify-center gap-2 mb-8">
-            <div className="w-2 h-2 rounded-full bg-indigo-500" />
+            <div className="w-2 h-2 rounded-full bg-[#5dc47e]" />
             <span className="text-sm text-gray-400">Регистрация</span>
           </div>
           <h2
@@ -23,7 +23,7 @@ export function CTASection() {
           </p>
           <p className="text-gray-400 text-sm mb-10">19 мая 2026 · 12:00 · Онлайн · Бесплатно</p>
           <div className="flex items-center justify-center gap-3 flex-wrap">
-            <button className="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-500 transition-colors text-sm">
+            <button className="px-6 py-3 bg-[#49B76E] text-white font-medium rounded-lg hover:bg-[#5dc47e] transition-colors text-sm">
               Зарегистрироваться
             </button>
             <button className="px-6 py-3 border border-gray-200 text-gray-600 font-medium rounded-lg hover:bg-gray-50 transition-colors text-sm">

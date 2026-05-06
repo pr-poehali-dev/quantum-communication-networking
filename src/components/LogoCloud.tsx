@@ -40,7 +40,7 @@ export function LogoCloud() {
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-5xl sm:text-6xl font-semibold text-gray-900 mb-1">{stat.value}</div>
-                <div className="text-sm text-indigo-600 font-medium mb-1">{stat.label}</div>
+                <div className="text-sm text-[#49B76E] font-medium mb-1">{stat.label}</div>
                 <div className="text-xs text-gray-400">{stat.desc}</div>
               </div>
             ))}
