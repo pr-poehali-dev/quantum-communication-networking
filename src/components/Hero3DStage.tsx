@@ -114,7 +114,7 @@ export function Hero3DStage() {
                   onMouseEnter={e => (e.currentTarget.style.background = "#3a9a5a")}
                   onMouseLeave={e => (e.currentTarget.style.background = "#49B76E")}
                 >
-                  Зарегистрироваться
+                  Забронировать место
                 </a>
                 <a
                   href="#program"

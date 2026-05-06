@@ -24,7 +24,7 @@ export function CTASection() {
           <p className="text-gray-400 text-sm mb-10">19 мая 2026 · 12:00 · Онлайн · Бесплатно</p>
           <div className="flex items-center justify-center gap-3 flex-wrap">
             <button className="px-6 py-3 bg-[#49B76E] text-white font-medium rounded-lg hover:bg-[#5dc47e] transition-colors text-sm">
-              Зарегистрироваться
+              Забронировать место
             </button>
             <button className="px-6 py-3 border border-gray-200 text-gray-600 font-medium rounded-lg hover:bg-gray-50 transition-colors text-sm">
               Программа

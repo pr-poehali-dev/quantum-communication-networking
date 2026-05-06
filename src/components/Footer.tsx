@@ -2,7 +2,7 @@ export function Footer() {
   const footerLinks: Record<string, { label: string; href: string }[]> = {
     "Мероприятие": [
       { label: "Программа", href: "#program" },
-      { label: "Зарегистрироваться", href: "#register" },
+      { label: "Забронировать место", href: "#register" },
       { label: "Для кого", href: "#audience" },
     ],
     "Продукт": [

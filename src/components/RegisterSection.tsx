@@ -38,7 +38,7 @@ export function RegisterSection() {
               type="submit"
               className="w-full py-3 bg-[#49B76E] hover:bg-[#5dc47e] text-white font-medium rounded-lg text-sm transition-colors mt-1"
             >
-              Зарегистрироваться
+              Забронировать место
             </button>
           </form>
 
