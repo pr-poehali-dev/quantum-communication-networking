@@ -251,8 +251,8 @@ export function ProductDirectionSection() {
             </div>
           </div>
 
-          <div className="pt-10 pl-10 pb-16">
-            <div className="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm">
+          <div className="pt-8 md:pt-10 pl-0 md:pl-10 pb-10 md:pb-16 flex justify-center md:block">
+            <div className="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm w-full max-w-sm md:max-w-none">
               <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100 text-gray-500 text-sm">
                 <span className="w-2 h-2 rounded-full bg-indigo-400" />
                 <span>PDSA Future IT Dent</span>
