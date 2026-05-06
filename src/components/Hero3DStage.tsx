@@ -189,7 +189,6 @@ export function Hero3DStage() {
           <ProductDirectionSection />
           <WorkflowsSection />
           <CTASection />
-          <Footer />
         </div>
       </section>
     </>
