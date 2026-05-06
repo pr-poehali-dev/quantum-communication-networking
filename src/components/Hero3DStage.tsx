@@ -116,14 +116,15 @@ export function Hero3DStage() {
                 >
                   Зарегистрироваться
                 </button>
-                <button
+                <a
+                  href="#program"
                   className="px-5 sm:px-6 py-2.5 sm:py-3 font-medium rounded-lg text-sm transition-colors"
                   style={{ border: "1px solid #E5E7EB", color: "#374151", background: "#fff" }}
                   onMouseEnter={e => (e.currentTarget.style.background = "#F9FAFB")}
                   onMouseLeave={e => (e.currentTarget.style.background = "#fff")}
                 >
                   Программа
-                </button>
+                </a>
               </motion.div>
             </div>
           </div>
