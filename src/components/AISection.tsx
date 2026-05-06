@@ -48,7 +48,7 @@ export function AISection() {
             <div style={{ perspective: "900px", userSelect: "none", WebkitUserSelect: "none", width: "100%", maxWidth: "720px", position: "relative" }}>
               <div style={{ transformOrigin: "top", willChange: "transform", transform: "translateY(0%) rotateX(30deg) scale(1.15)", position: "relative" }}>
                 <div style={{ border: "1px solid rgba(200,200,210,0.6)", background: "linear-gradient(rgba(255,255,255,0.8) 40%, rgba(250,251,255,0.4) 100%)", borderRadius: "8px", position: "absolute", top: 0, bottom: 0, left: 0, right: 0, boxShadow: "inset 0 1px 4px rgba(0,0,0,0.04)", pointerEvents: "none", zIndex: 10 }} />
-                <div style={{ background: "linear-gradient(180deg, transparent 0%, #FAFBFF 100%)", height: "80%", position: "absolute", bottom: "-2px", left: "-180px", right: "-180px", pointerEvents: "none", zIndex: 11 }} />
+                <div style={{ background: "linear-gradient(180deg, transparent 60%, #FAFBFF 100%)", height: "40%", position: "absolute", bottom: "-2px", left: "-180px", right: "-180px", pointerEvents: "none", zIndex: 11 }} />
                 <div className="border border-gray-200 rounded-t-xl px-5 py-4 bg-white">
                   <span className="text-gray-400 italic text-sm">Ключевые вопросы бизнеса...</span>
                 </div>
@@ -66,7 +66,7 @@ export function AISection() {
                         zIndex: 20,
                         marginLeft: "-12px",
                         marginRight: "-12px",
-                      } : { opacity: 1 - index * 0.13, height: "42px" }}
+                      } : { opacity: 1 - index * 0.06, height: "42px" }}
                     >
                       <div className="flex items-center justify-between h-full" style={{ paddingLeft: "24px", paddingRight: "24px", gap: "12px" }}>
                         <div className="flex items-center gap-3">
