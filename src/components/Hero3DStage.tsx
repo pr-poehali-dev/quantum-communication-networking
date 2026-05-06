@@ -1,14 +1,36 @@
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
+import { DashboardMockup } from "./DashboardMockup"
 import { Navbar } from "./Navbar"
 import { LogoCloud } from "./LogoCloud"
-import { ProductScreenshot } from "./ProductScreenshot"
 import { FeatureCardsSection } from "./FeatureCardsSection"
 import { AISection } from "./AISection"
 import { ProductDirectionSection } from "./ProductDirectionSection"
 import { WorkflowsSection } from "./WorkflowsSection"
 import { CTASection } from "./CTASection"
+import { Footer } from "./Footer"
 
 export function Hero3DStage() {
+  const [yOffset, setYOffset] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY
+      const offset = Math.min(scrollY / 300, 1) * -20
+      setYOffset(offset)
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const baseTransform = {
+    translateX: 2,
+    scale: 1.2,
+    rotateX: 47,
+    rotateY: 31,
+    rotateZ: 324,
+  }
 
   return (
     <>
@@ -91,9 +113,75 @@ export function Hero3DStage() {
             </div>
           </div>
 
+          {/* 3D Stage - full bleed */}
+          <div
+            className="relative mt-16"
+            style={{
+              width: "100vw",
+              marginLeft: "-50vw",
+              marginRight: "-50vw",
+              position: "relative",
+              left: "50%",
+              right: "50%",
+              height: "700px",
+              marginTop: "-60px",
+            }}
+          >
+            <div
+              className="absolute bottom-0 left-0 right-0 h-72 z-10 pointer-events-none"
+              style={{
+                background: "linear-gradient(to top, #09090B 20%, transparent 100%)",
+              }}
+            />
 
+            {/* Perspective container */}
+            <div
+              style={{
+                transform: `translateY(${yOffset}px)`,
+                transition: "transform 0.1s ease-out",
+                contain: "strict",
+                perspective: "4000px",
+                perspectiveOrigin: "100% 0",
+                width: "100%",
+                height: "100%",
+                transformStyle: "preserve-3d",
+                position: "relative",
+              }}
+            >
+              {/* Transformed base */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  delay: 0.5,
+                  duration: 1,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                style={{
+                  backgroundColor: "#09090B",
+                  transformOrigin: "0 0",
+                  backfaceVisibility: "hidden",
+                  WebkitBackfaceVisibility: "hidden",
+                  border: "1px solid #1e1e1e",
+                  borderRadius: "10px",
+                  width: "1600px",
+                  height: "900px",
+                  margin: "280px auto auto",
+                  position: "absolute",
+                  top: 0,
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  transform: `translate(${baseTransform.translateX}%) scale(${baseTransform.scale}) rotateX(${baseTransform.rotateX}deg) rotateY(${baseTransform.rotateY}deg) rotate(${baseTransform.rotateZ}deg)`,
+                  transformStyle: "preserve-3d",
+                  overflow: "hidden",
+                }}
+              >
+                <DashboardMockup />
+              </motion.div>
+            </div>
+          </div>
 
-          <ProductScreenshot />
           <LogoCloud />
           <FeatureCardsSection />
           <AISection />
