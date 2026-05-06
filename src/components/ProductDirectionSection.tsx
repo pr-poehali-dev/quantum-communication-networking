@@ -34,59 +34,80 @@ export function ProductDirectionSection() {
           <span className="text-gray-900 font-medium">Без теории ради теории.</span> Только реальные сценарии: полный путь пациента, точки потери выручки, постановка гипотез и оценка результатов.
         </p>
 
-        {/* Program steps */}
-        <div className="relative w-full mb-16">
-          <div className="relative">
-            <div className="flex flex-col gap-3">
-              {[
-                {
-                  num: "01",
-                  title: "Полный путь пациента",
-                  desc: "Откуда пришёл, записался ли, дошёл ли, оплатил ли — сквозная воронка без пробелов",
-                  color: "bg-blue-500",
-                  badge: "~20 мин",
-                },
-                {
-                  num: "02",
-                  title: "Точки потери выручки",
-                  desc: "Где именно клиника теряет деньги: между обращением и записью, между записью и приёмом, после приёма",
-                  color: "bg-indigo-500",
-                  badge: "~20 мин",
-                },
-                {
-                  num: "03",
-                  title: "Постановка гипотез",
-                  desc: "Как сформулировать проверяемую гипотезу роста и не слить бюджет на изменения, которые не работают",
-                  color: "bg-violet-500",
-                  badge: "~20 мин",
-                },
-                {
-                  num: "04",
-                  title: "Оценка результатов",
-                  desc: "PDSA-цикл в действии: как понять, сработало ли изменение, и принять решение о масштабировании",
-                  color: "bg-green-500",
-                  badge: "~20 мин",
-                },
-              ].map((item, i) => (
-                <div
-                  key={item.num}
-                  className="flex items-start gap-5 rounded-2xl border border-gray-200 bg-white px-6 py-5 hover:border-gray-300 hover:shadow-sm transition-all"
-                  style={{ opacity: 1 - i * 0.05 }}
-                >
-                  {/* Left accent */}
-                  <div className={`w-1 self-stretch rounded-full flex-shrink-0 ${item.color}`} style={{ minHeight: 48 }} />
-                  {/* Number */}
-                  <span className="text-gray-300 font-semibold text-lg tabular-nums flex-shrink-0 w-6 mt-0.5">{item.num}</span>
-                  {/* Content */}
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center justify-between gap-3 mb-1">
-                      <span className="text-gray-900 font-medium text-base">{item.title}</span>
-                      <span className="text-xs text-gray-400 flex-shrink-0 bg-gray-50 border border-gray-200 px-2 py-0.5 rounded-full">{item.badge}</span>
-                    </div>
-                    <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
-                  </div>
+        {/* Program steps — 3D mockup */}
+        <div
+          className="relative w-full mb-16 overflow-hidden"
+          style={{ height: 520 }}
+        >
+          {/* fade bottom */}
+          <div
+            className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none"
+            style={{ height: 180, background: "linear-gradient(to top, #FAFBFF 30%, transparent 100%)" }}
+          />
+
+          {/* perspective stage */}
+          <div style={{ perspective: "1800px", perspectiveOrigin: "50% 0%", width: "100%", height: "100%" }}>
+            <div
+              style={{
+                transform: "rotateX(42deg) rotateZ(-2deg) scale(1.05)",
+                transformOrigin: "50% 0%",
+                transformStyle: "preserve-3d",
+                width: "100%",
+              }}
+            >
+              {/* window chrome */}
+              <div
+                style={{
+                  border: "1px solid #e5e7eb",
+                  borderRadius: 12,
+                  overflow: "hidden",
+                  boxShadow: "0 32px 80px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.04)",
+                  background: "#fff",
+                }}
+              >
+                {/* titlebar */}
+                <div style={{ display: "flex", alignItems: "center", gap: 6, padding: "10px 16px", borderBottom: "1px solid #f0f0f0", background: "#fafafa" }}>
+                  <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#fca5a5" }} />
+                  <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#fde68a" }} />
+                  <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#86efac" }} />
+                  <span style={{ marginLeft: 8, fontSize: 11, color: "#9ca3af" }}>Программа вебинара · 12 мая 2026</span>
                 </div>
-              ))}
+
+                {/* rows */}
+                <div style={{ padding: "16px 20px", display: "flex", flexDirection: "column", gap: 10 }}>
+                  {[
+                    { num: "01", title: "Полный путь пациента", desc: "Откуда пришёл, записался ли, дошёл ли, оплатил ли — сквозная воронка без пробелов", accent: "#3b82f6", time: "12:00" },
+                    { num: "02", title: "Точки потери выручки", desc: "Где именно клиника теряет деньги: между обращением и записью, между записью и приёмом, после приёма", accent: "#6366f1", time: "12:20" },
+                    { num: "03", title: "Постановка гипотез", desc: "Как сформулировать проверяемую гипотезу роста и не слить бюджет на изменения, которые не работают", accent: "#8b5cf6", time: "12:40" },
+                    { num: "04", title: "Оценка результатов", desc: "PDSA-цикл в действии: как понять, сработало ли изменение, и принять решение о масштабировании", accent: "#22c55e", time: "13:00" },
+                  ].map((item, i) => (
+                    <div
+                      key={item.num}
+                      style={{
+                        display: "flex",
+                        alignItems: "flex-start",
+                        gap: 14,
+                        padding: "14px 16px",
+                        borderRadius: 10,
+                        border: "1px solid #f0f0f4",
+                        background: i === 0 ? "#fafbff" : "#fff",
+                        boxShadow: i === 0 ? "0 2px 12px rgba(99,102,241,0.07)" : "none",
+                      }}
+                    >
+                      <div style={{ width: 3, borderRadius: 99, alignSelf: "stretch", flexShrink: 0, background: item.accent, minHeight: 40 }} />
+                      <div style={{ fontSize: 13, fontWeight: 600, color: "#d1d5db", flexShrink: 0, width: 24 }}>{item.num}</div>
+                      <div style={{ flex: 1 }}>
+                        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, marginBottom: 4 }}>
+                          <span style={{ fontSize: 13, fontWeight: 600, color: "#111827" }}>{item.title}</span>
+                          <span style={{ fontSize: 11, color: "#9ca3af", background: "#f9fafb", border: "1px solid #e5e7eb", borderRadius: 999, padding: "1px 8px", flexShrink: 0 }}>~20 мин</span>
+                        </div>
+                        <p style={{ fontSize: 12, color: "#6b7280", lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
+                      </div>
+                      <div style={{ fontSize: 11, color: "#9ca3af", flexShrink: 0, fontVariantNumeric: "tabular-nums" }}>{item.time}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
