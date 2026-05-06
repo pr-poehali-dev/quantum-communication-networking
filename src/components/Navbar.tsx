@@ -8,7 +8,7 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-gray-200 bg-[#FAFBFF]/80 backdrop-blur-md">
       <div className="w-full flex justify-center px-4 sm:px-6 py-3 sm:py-4">
         <div className="w-full max-w-4xl flex items-center justify-between">
-          <span className="text-gray-900 font-semibold tracking-tight text-sm sm:text-base">Future IT Dent</span>
+          <a href="https://future-it-dent.ru/" target="_blank" rel="noopener noreferrer" className="text-gray-900 font-semibold tracking-tight text-sm sm:text-base hover:text-gray-600 transition-colors">Future IT Dent</a>
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-8">
