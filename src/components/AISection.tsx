@@ -57,7 +57,7 @@ export function AISection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-zinc-400 max-w-md mb-8"
           >
-            <span className="text-white font-medium">Future IT Dent — это не про графики.</span> Это про ответы на ключевые вопросы вашего бизнеса.
+            <span className="text-white font-medium">Future IT Dent — это не про графики.</span> Это ответы на ключевые вопросы вашего бизнеса.
           </motion.p>
 
           <motion.a

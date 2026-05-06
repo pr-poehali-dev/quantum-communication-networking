@@ -28,7 +28,7 @@ export function LogoCloud() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-lg text-zinc-400 mb-16"
           >
-            А не ощущений, догадок и интуиции.
+            А не ощущений, догадок и слепой интуиции.
           </motion.p>
 
           <motion.div

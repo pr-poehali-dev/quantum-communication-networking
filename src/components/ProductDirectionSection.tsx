@@ -31,7 +31,7 @@ export function ProductDirectionSection() {
         </h2>
 
         <p className="text-zinc-400 text-lg max-w-md mb-16">
-          <span className="text-white font-medium">Без теории ради теории.</span> Только реальные сценарии: путь пациента от обращения до оплаты, точки потери выручки, постановка гипотез и оценка результата.
+          <span className="text-white font-medium">Без теории ради теории.</span> Только реальные сценарии: полный путь пациента, точки потери выручки, постановка гипотез и оценка результатов.
         </p>
 
         {/* 3D Timeline Visualization */}

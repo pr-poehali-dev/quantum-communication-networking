@@ -19,7 +19,7 @@ const carouselCards = [
   {
     id: 3,
     category: "Маркетологи",
-    title: "Понимать, какие каналы приносят не заявки, а деньги",
+    title: "Понимать, какие каналы приносят деньги, а не заявки",
     icon: ArrowRight,
     mockup: "marketer",
   },
