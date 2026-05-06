@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import { DashboardMockup } from "./DashboardMockup"
 import { Navbar } from "./Navbar"
 import { LogoCloud } from "./LogoCloud"
+import { ProductScreenshot } from "./ProductScreenshot"
 import { FeatureCardsSection } from "./FeatureCardsSection"
 import { AISection } from "./AISection"
 import { ProductDirectionSection } from "./ProductDirectionSection"
@@ -182,6 +183,7 @@ export function Hero3DStage() {
             </div>
           </div>
 
+          <ProductScreenshot />
           <LogoCloud />
           <FeatureCardsSection />
           <AISection />
