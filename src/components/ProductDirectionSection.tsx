@@ -34,146 +34,59 @@ export function ProductDirectionSection() {
           <span className="text-gray-900 font-medium">Без теории ради теории.</span> Только реальные сценарии: полный путь пациента, точки потери выручки, постановка гипотез и оценка результатов.
         </p>
 
-        {/* 3D Timeline Visualization */}
-        <div
-          className="relative w-full mb-16"
-          style={{
-            perspective: "1200px",
-          }}
-        >
-          <div
-            className="relative"
-            style={{
-              transform: "rotateX(50deg) rotateZ(-35deg)",
-              transformStyle: "preserve-3d",
-              transformOrigin: "center center",
-            }}
-          >
-            {/* Timeline ruler with tick marks */}
-            <div className="relative h-[400px]">
-              {/* Diagonal dashed line */}
-              <div
-                className="absolute w-[1px] bg-zinc-600/50"
-                style={{
-                  height: "600px",
-                  left: "55%",
-                  top: "-100px",
-                  transform: "rotate(0deg)",
-                  backgroundImage:
-                    "repeating-linear-gradient(to bottom, transparent, transparent 4px, rgba(113, 113, 122, 0.5) 4px, rgba(113, 113, 122, 0.5) 8px)",
-                }}
-              />
-
-              {/* Timeline header with dates and tick marks */}
-              <div className="absolute top-0 left-0 right-0 flex items-end">
-                {/* Tick marks row */}
-                <div className="flex items-end gap-[3px] absolute bottom-0 left-[5%] right-0">
-                  {Array.from({ length: 60 }).map((_, i) => (
-                    <div
-                      key={i}
-                      className="bg-zinc-600/60"
-                      style={{
-                        width: "1px",
-                        height: i % 7 === 0 ? "16px" : "8px",
-                      }}
-                    />
-                  ))}
-                </div>
-              </div>
-
-              {/* Date labels */}
-              <div className="absolute text-zinc-500 text-sm" style={{ left: "8%", top: "80px" }}>
-                30
-              </div>
-              <div className="absolute text-zinc-500 text-sm" style={{ left: "18%", top: "55px" }}>
-                3 АВГ
-              </div>
-              <div className="absolute text-zinc-500 text-sm" style={{ left: "32%", top: "35px" }}>
-                10
-              </div>
-              <div className="absolute text-zinc-500 text-sm" style={{ left: "48%", top: "15px" }}>
-                17
-              </div>
-              <div
-                className="absolute px-3 py-1 rounded-md bg-zinc-700/80 text-zinc-300 text-sm font-medium"
-                style={{ left: "58%", top: "-10px" }}
-              >
-                22 АВГ
-              </div>
-              <div className="absolute text-zinc-500 text-sm" style={{ left: "70%", top: "-5px" }}>
-                24
-              </div>
-              <div className="absolute text-zinc-500/50 text-sm" style={{ left: "88%", top: "-25px" }}>
-                СЕН
-              </div>
-
-              {/* Project bars */}
-              {/* Realtime inference bar */}
-              <div
-                className="absolute rounded-lg bg-zinc-800/90 border border-zinc-700/50 px-4 py-3 flex items-center gap-3"
-                style={{
-                  left: "5%",
-                  top: "100px",
-                  width: "45%",
-                  height: "48px",
-                }}
-              >
-                <div className="w-4 h-4 rotate-45 bg-zinc-500/60" />
-                <span className="text-zinc-300 text-sm font-medium">Инференс в реальном времени</span>
+        {/* Program steps */}
+        <div className="relative w-full mb-16">
+          <div className="relative">
+            <div className="flex flex-col gap-3">
+              {[
+                {
+                  num: "01",
+                  title: "Полный путь пациента",
+                  desc: "Откуда пришёл, записался ли, дошёл ли, оплатил ли — сквозная воронка без пробелов",
+                  color: "bg-blue-500",
+                  badge: "~20 мин",
+                },
+                {
+                  num: "02",
+                  title: "Точки потери выручки",
+                  desc: "Где именно клиника теряет деньги: между обращением и записью, между записью и приёмом, после приёма",
+                  color: "bg-indigo-500",
+                  badge: "~20 мин",
+                },
+                {
+                  num: "03",
+                  title: "Постановка гипотез",
+                  desc: "Как сформулировать проверяемую гипотезу роста и не слить бюджет на изменения, которые не работают",
+                  color: "bg-violet-500",
+                  badge: "~20 мин",
+                },
+                {
+                  num: "04",
+                  title: "Оценка результатов",
+                  desc: "PDSA-цикл в действии: как понять, сработало ли изменение, и принять решение о масштабировании",
+                  color: "bg-green-500",
+                  badge: "~20 мин",
+                },
+              ].map((item, i) => (
                 <div
-                  className="absolute w-5 h-5 rotate-45 border-2 border-green-500 bg-transparent"
-                  style={{ right: "15%", top: "50%", transform: "translateY(-50%) rotate(45deg)" }}
-                />
-              </div>
-
-              {/* Prototype bar */}
-              <div
-                className="absolute rounded-lg bg-zinc-800/70 border border-zinc-700/40 px-4 py-3 flex items-center gap-3"
-                style={{
-                  left: "15%",
-                  top: "155px",
-                  width: "25%",
-                  height: "44px",
-                }}
-              >
-                <div className="w-3 h-3 rotate-45 bg-zinc-600/60" />
-                <span className="text-zinc-500 text-sm">Прототип</span>
-              </div>
-
-              {/* Beta bar */}
-              <div
-                className="absolute rounded-lg bg-zinc-800/90 border border-zinc-700/50 px-4 py-3 flex items-center justify-between"
-                style={{
-                  left: "45%",
-                  top: "155px",
-                  width: "45%",
-                  height: "48px",
-                }}
-              >
-                <span className="text-zinc-400 text-sm">Бета</span>
-                <div className="flex gap-0.5">
-                  <div className="w-2.5 h-2.5 rotate-45 bg-zinc-500/60" />
-                  <div className="w-2.5 h-2.5 rotate-45 bg-zinc-500/60" />
-                  <div className="w-2.5 h-2.5 rotate-45 bg-zinc-500/60" />
+                  key={item.num}
+                  className="flex items-start gap-5 rounded-2xl border border-gray-200 bg-white px-6 py-5 hover:border-gray-300 hover:shadow-sm transition-all"
+                  style={{ opacity: 1 - i * 0.05 }}
+                >
+                  {/* Left accent */}
+                  <div className={`w-1 self-stretch rounded-full flex-shrink-0 ${item.color}`} style={{ minHeight: 48 }} />
+                  {/* Number */}
+                  <span className="text-gray-300 font-semibold text-lg tabular-nums flex-shrink-0 w-6 mt-0.5">{item.num}</span>
+                  {/* Content */}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center justify-between gap-3 mb-1">
+                      <span className="text-gray-900 font-medium text-base">{item.title}</span>
+                      <span className="text-xs text-gray-400 flex-shrink-0 bg-gray-50 border border-gray-200 px-2 py-0.5 rounded-full">{item.badge}</span>
+                    </div>
+                    <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                  </div>
                 </div>
-              </div>
-
-              {/* RLHF fine tuning bar */}
-              <div
-                className="absolute rounded-lg bg-zinc-800/70 border border-zinc-700/40 px-4 py-3 flex items-center justify-between"
-                style={{
-                  left: "35%",
-                  top: "240px",
-                  width: "28%",
-                  height: "48px",
-                }}
-              >
-                <span className="text-zinc-400 text-sm">RLHF-дообучение</span>
-                <div className="flex gap-0.5">
-                  <div className="w-2.5 h-2.5 rotate-45 bg-zinc-500/60" />
-                  <div className="w-2.5 h-2.5 rotate-45 bg-zinc-500/60" />
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
