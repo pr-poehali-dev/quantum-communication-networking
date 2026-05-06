@@ -8,7 +8,7 @@ export function CTASection() {
             <span className="text-sm text-zinc-400">Регистрация</span>
           </div>
           <h2
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] text-white mb-6 mx-auto max-w-3xl"
+            className="text-3xl sm:text-4xl lg:text-[44px] text-white mb-6 mx-auto max-w-3xl"
             style={{
               letterSpacing: "-0.0325em",
               fontVariationSettings: '"opsz" 28',

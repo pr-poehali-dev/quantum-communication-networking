@@ -19,7 +19,7 @@ export function ProductDirectionSection() {
         </div>
 
         <h2
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-white mb-8 max-w-3xl"
+          className="text-3xl sm:text-4xl lg:text-[44px] font-medium text-white mb-8 max-w-3xl"
           style={{
             letterSpacing: "-0.0325em",
             fontVariationSettings: '"opsz" 28',

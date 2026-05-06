@@ -64,7 +64,7 @@ export function FeatureCardsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] text-white max-w-md"
+              className="text-3xl sm:text-4xl lg:text-[44px] text-white max-w-md"
               style={{
                 letterSpacing: "-0.0325em",
                 fontVariationSettings: '"opsz" 28',
