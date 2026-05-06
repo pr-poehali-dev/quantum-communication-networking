@@ -7,8 +7,7 @@ import { FeatureCardsSection } from "./FeatureCardsSection"
 import { AISection } from "./AISection"
 import { ProductDirectionSection } from "./ProductDirectionSection"
 import { WorkflowsSection } from "./WorkflowsSection"
-import { RegisterSection } from "./RegisterSection"
-import { Footer } from "./Footer"
+
 
 const BG = "#FAFBFF"
 
@@ -193,8 +192,7 @@ export function Hero3DStage() {
           <AISection />
           <ProductDirectionSection />
           <WorkflowsSection />
-          <RegisterSection />
-          <Footer />
+          <div id="register" />
         </div>
       </section>
     </>
