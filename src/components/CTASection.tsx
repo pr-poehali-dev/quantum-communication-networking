@@ -3,7 +3,7 @@ export function CTASection() {
     <section className="py-24 px-6" style={{ backgroundColor: "#09090B" }}>
       <div className="max-w-6xl mx-auto">
         <div className="border border-zinc-800 rounded-2xl p-12 bg-zinc-900/30 text-center">
-          <p className="text-zinc-500 text-sm mb-4">12 мая · Онлайн · Бесплатно</p>
+          <p className="text-zinc-500 text-sm mb-4">12 мая 2026 · 12:00 · Онлайн · Бесплатно</p>
           <h2 className="text-3xl md:text-4xl lg:text-[42px] font-medium text-white tracking-tight mb-4">
             Управлять клиникой без аналитики — значит управлять вслепую
           </h2>

@@ -62,7 +62,7 @@ export function Hero3DStage() {
                 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-sm mb-6"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
-                Онлайн-вебинар · 12 мая 2025
+                Онлайн-вебинар · 12 мая 2026 · 12:00
               </motion.div>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
