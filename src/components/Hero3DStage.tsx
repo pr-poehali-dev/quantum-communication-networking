@@ -46,7 +46,7 @@ export function Hero3DStage() {
             transform: "translate(-50%, -30%)",
             width: "1200px",
             height: "800px",
-            background: "radial-gradient(ellipse at center, rgba(99,102,241,0.07) 0%, transparent 70%)",
+            background: "radial-gradient(ellipse at center, rgba(73,183,110,0.07) 0%, transparent 70%)",
           }}
         />
 
@@ -60,9 +60,9 @@ export function Hero3DStage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs sm:text-sm mb-4 sm:mb-6"
-                style={{ borderColor: "rgba(99,102,241,0.25)", background: "rgba(99,102,241,0.06)", color: "#4F46E5" }}
+                style={{ borderColor: "rgba(73,183,110,0.35)", background: "rgba(73,183,110,0.07)", color: "#49B76E" }}
               >
-                <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "#6366F1" }} />
+                <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "#49B76E" }} />
                 Онлайн-вебинар · 19 мая · 12:00
               </motion.div>
               <motion.h1
@@ -110,9 +110,9 @@ export function Hero3DStage() {
                 <a
                   href="#register"
                   className="px-5 sm:px-6 py-2.5 sm:py-3 font-medium rounded-lg text-sm transition-colors"
-                  style={{ background: "#4F46E5", color: "#fff" }}
-                  onMouseEnter={e => (e.currentTarget.style.background = "#4338CA")}
-                  onMouseLeave={e => (e.currentTarget.style.background = "#4F46E5")}
+                  style={{ background: "#49B76E", color: "#fff" }}
+                  onMouseEnter={e => (e.currentTarget.style.background = "#3a9a5a")}
+                  onMouseLeave={e => (e.currentTarget.style.background = "#49B76E")}
                 >
                   Зарегистрироваться
                 </a>
