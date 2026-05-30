@@ -109,7 +109,7 @@ export function Hero3DStage() {
                 className="mt-6 sm:mt-8 flex flex-wrap items-center gap-3 relative z-20"
               >
                 <a
-                  href="#rec2240710911"
+                  href="https://webinar.future-it-pro.ru/pdsa#rec2240710911"
                   className="px-5 sm:px-6 py-2.5 sm:py-3 font-medium rounded-lg text-sm transition-colors"
                   style={{ background: "#49B76E", color: "#fff" }}
                   onMouseEnter={e => (e.currentTarget.style.background = "#3a9a5a")}

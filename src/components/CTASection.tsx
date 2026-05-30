@@ -23,7 +23,7 @@ export function CTASection() {
           </p>
           <p className="text-gray-400 text-sm mb-10">09.06.2026 · Онлайн · Бесплатно</p>
           <div className="flex items-center justify-center gap-3 flex-wrap">
-            <a href="#rec2240710911" className="px-6 py-3 bg-[#49B76E] text-white font-medium rounded-lg hover:bg-[#5dc47e] transition-colors text-sm">
+            <a href="https://webinar.future-it-pro.ru/pdsa#rec2240710911" className="px-6 py-3 bg-[#49B76E] text-white font-medium rounded-lg hover:bg-[#5dc47e] transition-colors text-sm">
               Забронировать место
             </a>
             <a href="#program" className="px-6 py-3 border border-gray-200 text-gray-600 font-medium rounded-lg hover:bg-gray-50 transition-colors text-sm">
