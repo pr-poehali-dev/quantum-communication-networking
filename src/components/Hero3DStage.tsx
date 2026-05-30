@@ -7,6 +7,7 @@ import { FeatureCardsSection } from "./FeatureCardsSection"
 import { AISection } from "./AISection"
 import { ProductDirectionSection } from "./ProductDirectionSection"
 import { WorkflowsSection } from "./WorkflowsSection"
+import { SpeakerSection } from "./SpeakerSection"
 
 
 const BG = "#FAFBFF"
@@ -192,6 +193,7 @@ export function Hero3DStage() {
           <AISection />
           <ProductDirectionSection />
           <WorkflowsSection />
+          <SpeakerSection />
           <div id="register" />
         </div>
       </section>
