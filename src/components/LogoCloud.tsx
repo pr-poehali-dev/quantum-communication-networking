@@ -4,7 +4,7 @@ const stats = [
   { value: "60–90", label: "минут", desc: "насыщенного контента" },
   { value: "4", label: "темы", desc: "аналитика, PDSA, когорты, потери" },
   { value: "0", label: "теории ради теории", desc: "только реальные сценарии" },
-  { value: "09.06", label: "2026", desc: "онлайн, бесплатно" },
+  { value: "09", label: "июня", desc: "онлайн, бесплатно" },
 ]
 
 export function LogoCloud() {
