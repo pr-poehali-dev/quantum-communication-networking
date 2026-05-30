@@ -190,9 +190,9 @@ export function Hero3DStage() {
 
           <LogoCloud />
           <FeatureCardsSection />
-          <SpeakerSection />
           <AISection />
           <ProductDirectionSection />
+          <SpeakerSection />
           <WorkflowsSection />
           <div id="register" />
         </div>
