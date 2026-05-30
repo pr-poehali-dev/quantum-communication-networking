@@ -35,7 +35,7 @@ export function AISection() {
           </motion.p>
 
           <motion.a
-            href="#register"
+            href="#rec2240710911"
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}
             className="px-6 py-3 bg-[#49B76E] text-white font-medium rounded-lg hover:bg-[#5dc47e] transition-colors text-sm flex items-center gap-2 mb-16 w-fit"
           >
