@@ -88,7 +88,7 @@ export function ProductDirectionSection() {
                 <div style={{ width: 11, height: 11, borderRadius: "50%", background: "#fca5a5" }} />
                 <div style={{ width: 11, height: 11, borderRadius: "50%", background: "#fde68a" }} />
                 <div style={{ width: 11, height: 11, borderRadius: "50%", background: "#86efac" }} />
-                <span style={{ marginLeft: 10, fontSize: 12, color: "#9ca3af", fontFamily: "Inter, sans-serif" }}>Программа вебинара · 19 мая 2026</span>
+                <span style={{ marginLeft: 10, fontSize: 12, color: "#9ca3af", fontFamily: "Inter, sans-serif" }}>Программа вебинара · 09.06.2026</span>
               </div>
 
               {/* content */}
