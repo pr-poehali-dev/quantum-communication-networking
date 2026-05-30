@@ -73,11 +73,11 @@ export function SpeakerSection() {
               initial={{ opacity: 0, scale: 0.96 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.2 }}
               className="flex-shrink-0 w-full lg:w-[380px]"
             >
-              <div className="relative rounded-2xl overflow-hidden bg-[#e6f7ed]" style={{ aspectRatio: "4/5" }}>
+              <div className="relative rounded-2xl overflow-hidden bg-[#eef0f8]" style={{ aspectRatio: "1/1" }}>
                 <img
-                  src="https://cdn.poehali.dev/projects/1469ebbc-f5f2-410f-a6b6-ad7c1a2f72dd/bucket/3cf59248-80f8-4999-8fca-295724a4a0dd.png"
+                  src="https://cdn.poehali.dev/projects/1469ebbc-f5f2-410f-a6b6-ad7c1a2f72dd/bucket/d5bf23bf-c1df-4199-a365-63da99556d0b.png"
                   alt="Николай Латышев"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
             </motion.div>

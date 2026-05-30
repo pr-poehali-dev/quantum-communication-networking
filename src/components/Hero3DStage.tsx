@@ -191,9 +191,9 @@ export function Hero3DStage() {
           <LogoCloud />
           <FeatureCardsSection />
           <AISection />
+          <SpeakerSection />
           <ProductDirectionSection />
           <WorkflowsSection />
-          <SpeakerSection />
           <div id="register" />
         </div>
       </section>
