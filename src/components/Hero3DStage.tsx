@@ -64,7 +64,7 @@ export function Hero3DStage() {
                 style={{ borderColor: "rgba(73,183,110,0.35)", background: "rgba(73,183,110,0.07)", color: "#49B76E" }}
               >
                 <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "#49B76E" }} />
-                Онлайн-вебинар · 19 мая · 12:00
+                Онлайн-вебинар · 09.06.2026 · Бесплатно
               </motion.div>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
@@ -73,7 +73,7 @@ export function Hero3DStage() {
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium leading-[1.1] text-balance"
                 style={{ color: "#111827" }}
               >
-                Круглый стол Future IT Dent
+                Бесплатный вебинар Future IT Dent
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}

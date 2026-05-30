@@ -13,7 +13,7 @@ export function RegisterSection() {
           >
             Зарегистрируйтесь на вебинар
           </h2>
-          <p className="text-gray-400 text-sm mb-8">19 мая · 12:00 · Онлайн · Бесплатно</p>
+          <p className="text-gray-400 text-sm mb-8">09.06.2026 · Онлайн · Бесплатно</p>
 
           <form
             className="flex flex-col gap-3"

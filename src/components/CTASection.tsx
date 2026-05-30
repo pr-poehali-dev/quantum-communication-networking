@@ -21,7 +21,7 @@ export function CTASection() {
           <p className="text-gray-500 text-base max-w-xl mx-auto mb-2 leading-relaxed">
             Ощущения показывают, что «что-то не так». Данные показывают — где именно и почему.
           </p>
-          <p className="text-gray-400 text-sm mb-10">19 мая 2026 · 12:00 · Онлайн · Бесплатно</p>
+          <p className="text-gray-400 text-sm mb-10">09.06.2026 · Онлайн · Бесплатно</p>
           <div className="flex items-center justify-center gap-3 flex-wrap">
             <button className="px-6 py-3 bg-[#49B76E] text-white font-medium rounded-lg hover:bg-[#5dc47e] transition-colors text-sm">
               Забронировать место
